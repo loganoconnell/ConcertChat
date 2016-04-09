@@ -1,0 +1,35 @@
+//
+//  ConcertChat.h
+//  ConcertChat
+//
+//  Created by Logan O'Connell on 4/4/16.
+//  Copyright © 2016 Logan O'Connell. All rights reserved.
+//
+
+#ifndef ConcertChat_h
+#define ConcertChat_h
+
+#define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define userDefaults [NSUserDefaults standardUserDefaults]
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255 green:((float)((rgbValue & 0xFF00) >> 8))/255 blue:((float)(rgbValue & 0xFF))/255 alpha:1]
+
+@import Foundation;
+@import UIKit;
+@import MultipeerConnectivity;
+@import MessageUI;
+
+#import <JSQMessagesViewController/JSQMessagesViewController.h>
+#import <JSQMessagesViewController/JSQMessage.h>
+#import <JSQMessagesViewController/JSQMessagesBubbleImageFactory.h>
+#import <JSQMessagesViewController/JSQMessagesComposerTextView.h>
+#import <JSQMessagesViewController/JSQPhotoMediaItem.h>
+#import <JSQMessagesViewController/JSQSystemSoundPlayer+JSQMessages.h>
+#import <JSQMessagesViewController/UIColor+JSQMessages.h>
+
+#import <SCLAlertView-Objective-C/SCLAlertView.h>
+
+#import <MBProgressHUD/MBProgressHUD.h>
+
+#import <JTSImageViewController/JTSImageViewController.h>
+
+#endif /* ConcertChat_h */

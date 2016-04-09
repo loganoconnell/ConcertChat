@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EDA1311C26735EA43199690 /* libPods-ConcertChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */; };
+		67424EAF1CB4725C00E73249 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67424EAE1CB4725C00E73249 /* ChatViewController.m */; };
+		677E6EB81CB3140500DCA2FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6EB71CB3140500DCA2FB /* main.m */; };
+		677E6EBB1CB3140500DCA2FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6EBA1CB3140500DCA2FB /* AppDelegate.m */; };
+		677E6EBE1CB3140500DCA2FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6EBD1CB3140500DCA2FB /* ViewController.m */; };
+		677E6EC11CB3140500DCA2FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677E6EBF1CB3140500DCA2FB /* Main.storyboard */; };
+		677E6EC31CB3140500DCA2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677E6EC21CB3140500DCA2FB /* Assets.xcassets */; };
+		677E6EC61CB3140500DCA2FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677E6EC41CB3140500DCA2FB /* LaunchScreen.storyboard */; };
+		677E6ED11CB3140500DCA2FB /* ConcertChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6ED01CB3140500DCA2FB /* ConcertChatTests.m */; };
+		677E6EDC1CB3140500DCA2FB /* ConcertChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6EDB1CB3140500DCA2FB /* ConcertChatUITests.m */; };
+		677E6EEB1CB3153A00DCA2FB /* MPCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6EEA1CB3153A00DCA2FB /* MPCManager.m */; };
+		679F4CC11CB54BCD00DC41ED /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 679F4CC01CB54BCD00DC41ED /* SettingsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		677E6ECD1CB3140500DCA2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 677E6EAB1CB3140500DCA2FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 677E6EB21CB3140500DCA2FB;
+			remoteInfo = ConcertChat;
+		};
+		677E6ED81CB3140500DCA2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 677E6EAB1CB3140500DCA2FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 677E6EB21CB3140500DCA2FB;
+			remoteInfo = ConcertChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConcertChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67424EAD1CB4725C00E73249 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		67424EAE1CB4725C00E73249 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		677E6EB31CB3140500DCA2FB /* ConcertChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcertChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		677E6EB71CB3140500DCA2FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		677E6EB91CB3140500DCA2FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		677E6EBA1CB3140500DCA2FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		677E6EBC1CB3140500DCA2FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		677E6EBD1CB3140500DCA2FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		677E6EC01CB3140500DCA2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		677E6EC21CB3140500DCA2FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		677E6EC51CB3140500DCA2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		677E6EC71CB3140500DCA2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		677E6ECC1CB3140500DCA2FB /* ConcertChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcertChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		677E6ED01CB3140500DCA2FB /* ConcertChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcertChatTests.m; sourceTree = "<group>"; };
+		677E6ED21CB3140500DCA2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		677E6ED71CB3140500DCA2FB /* ConcertChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcertChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		677E6EDB1CB3140500DCA2FB /* ConcertChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcertChatUITests.m; sourceTree = "<group>"; };
+		677E6EDD1CB3140500DCA2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		677E6EE91CB3153A00DCA2FB /* MPCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCManager.h; sourceTree = "<group>"; };
+		677E6EEA1CB3153A00DCA2FB /* MPCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCManager.m; sourceTree = "<group>"; };
+		677E6EEC1CB33BF400DCA2FB /* ConcertChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConcertChat.h; sourceTree = "<group>"; };
+		678D66611CB5578100CFB89E /* SCLAlertView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SCLAlertView.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ConcertChat-dphkglbsnzqvcxbvusrxsnvkkgsj/Build/Products/Debug-iphonesimulator/SCLAlertView.framework"; sourceTree = "<group>"; };
+		679F4CBF1CB54BCD00DC41ED /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		679F4CC01CB54BCD00DC41ED /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		6A233F0D1091A9DF52552CF1 /* Pods-ConcertChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcertChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConcertChat/Pods-ConcertChat.release.xcconfig"; sourceTree = "<group>"; };
+		889D40D6BAA5A75A7DB55C29 /* Pods-ConcertChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcertChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConcertChat/Pods-ConcertChat.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		677E6EB01CB3140500DCA2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EDA1311C26735EA43199690 /* libPods-ConcertChat.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677E6EC91CB3140500DCA2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677E6ED41CB3140500DCA2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		677E6EAA1CB3140500DCA2FB = {
+			isa = PBXGroup;
+			children = (
+				677E6EB51CB3140500DCA2FB /* ConcertChat */,
+				677E6ECF1CB3140500DCA2FB /* ConcertChatTests */,
+				677E6EDA1CB3140500DCA2FB /* ConcertChatUITests */,
+				677E6EB41CB3140500DCA2FB /* Products */,
+				B60C0A85B52DCCB57CFF55D1 /* Pods */,
+				9D16D989161ECB9063F9120D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		677E6EB41CB3140500DCA2FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				677E6EB31CB3140500DCA2FB /* ConcertChat.app */,
+				677E6ECC1CB3140500DCA2FB /* ConcertChatTests.xctest */,
+				677E6ED71CB3140500DCA2FB /* ConcertChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		677E6EB51CB3140500DCA2FB /* ConcertChat */ = {
+			isa = PBXGroup;
+			children = (
+				677E6EEC1CB33BF400DCA2FB /* ConcertChat.h */,
+				677E6EB91CB3140500DCA2FB /* AppDelegate.h */,
+				677E6EBA1CB3140500DCA2FB /* AppDelegate.m */,
+				677E6EBC1CB3140500DCA2FB /* ViewController.h */,
+				677E6EBD1CB3140500DCA2FB /* ViewController.m */,
+				67424EAD1CB4725C00E73249 /* ChatViewController.h */,
+				67424EAE1CB4725C00E73249 /* ChatViewController.m */,
+				679F4CBF1CB54BCD00DC41ED /* SettingsViewController.h */,
+				679F4CC01CB54BCD00DC41ED /* SettingsViewController.m */,
+				677E6EE91CB3153A00DCA2FB /* MPCManager.h */,
+				677E6EEA1CB3153A00DCA2FB /* MPCManager.m */,
+				677E6EBF1CB3140500DCA2FB /* Main.storyboard */,
+				677E6EC41CB3140500DCA2FB /* LaunchScreen.storyboard */,
+				677E6EC21CB3140500DCA2FB /* Assets.xcassets */,
+				677E6EC71CB3140500DCA2FB /* Info.plist */,
+				677E6EB61CB3140500DCA2FB /* Supporting Files */,
+			);
+			path = ConcertChat;
+			sourceTree = "<group>";
+		};
+		677E6EB61CB3140500DCA2FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				677E6EB71CB3140500DCA2FB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		677E6ECF1CB3140500DCA2FB /* ConcertChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				677E6ED01CB3140500DCA2FB /* ConcertChatTests.m */,
+				677E6ED21CB3140500DCA2FB /* Info.plist */,
+			);
+			path = ConcertChatTests;
+			sourceTree = "<group>";
+		};
+		677E6EDA1CB3140500DCA2FB /* ConcertChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				677E6EDB1CB3140500DCA2FB /* ConcertChatUITests.m */,
+				677E6EDD1CB3140500DCA2FB /* Info.plist */,
+			);
+			path = ConcertChatUITests;
+			sourceTree = "<group>";
+		};
+		9D16D989161ECB9063F9120D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				678D66611CB5578100CFB89E /* SCLAlertView.framework */,
+				2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B60C0A85B52DCCB57CFF55D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				889D40D6BAA5A75A7DB55C29 /* Pods-ConcertChat.debug.xcconfig */,
+				6A233F0D1091A9DF52552CF1 /* Pods-ConcertChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		677E6EB21CB3140500DCA2FB /* ConcertChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 677E6EE01CB3140500DCA2FB /* Build configuration list for PBXNativeTarget "ConcertChat" */;
+			buildPhases = (
+				45BDE8F0EE7005875ADE40D4 /* Check Pods Manifest.lock */,
+				677E6EAF1CB3140500DCA2FB /* Sources */,
+				677E6EB01CB3140500DCA2FB /* Frameworks */,
+				677E6EB11CB3140500DCA2FB /* Resources */,
+				9308119D8F856003C85E9728 /* Embed Pods Frameworks */,
+				65FDF54A4C460B0E68F0AD95 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConcertChat;
+			productName = ConcertChat;
+			productReference = 677E6EB31CB3140500DCA2FB /* ConcertChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		677E6ECB1CB3140500DCA2FB /* ConcertChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 677E6EE31CB3140500DCA2FB /* Build configuration list for PBXNativeTarget "ConcertChatTests" */;
+			buildPhases = (
+				677E6EC81CB3140500DCA2FB /* Sources */,
+				677E6EC91CB3140500DCA2FB /* Frameworks */,
+				677E6ECA1CB3140500DCA2FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				677E6ECE1CB3140500DCA2FB /* PBXTargetDependency */,
+			);
+			name = ConcertChatTests;
+			productName = ConcertChatTests;
+			productReference = 677E6ECC1CB3140500DCA2FB /* ConcertChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		677E6ED61CB3140500DCA2FB /* ConcertChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 677E6EE61CB3140500DCA2FB /* Build configuration list for PBXNativeTarget "ConcertChatUITests" */;
+			buildPhases = (
+				677E6ED31CB3140500DCA2FB /* Sources */,
+				677E6ED41CB3140500DCA2FB /* Frameworks */,
+				677E6ED51CB3140500DCA2FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				677E6ED91CB3140500DCA2FB /* PBXTargetDependency */,
+			);
+			name = ConcertChatUITests;
+			productName = ConcertChatUITests;
+			productReference = 677E6ED71CB3140500DCA2FB /* ConcertChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		677E6EAB1CB3140500DCA2FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Logan O'Connell";
+				TargetAttributes = {
+					677E6EB21CB3140500DCA2FB = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = NXN833X2XS;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					677E6ECB1CB3140500DCA2FB = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = NXN833X2XS;
+						TestTargetID = 677E6EB21CB3140500DCA2FB;
+					};
+					677E6ED61CB3140500DCA2FB = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = NXN833X2XS;
+						TestTargetID = 677E6EB21CB3140500DCA2FB;
+					};
+				};
+			};
+			buildConfigurationList = 677E6EAE1CB3140500DCA2FB /* Build configuration list for PBXProject "ConcertChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 677E6EAA1CB3140500DCA2FB;
+			productRefGroup = 677E6EB41CB3140500DCA2FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				677E6EB21CB3140500DCA2FB /* ConcertChat */,
+				677E6ECB1CB3140500DCA2FB /* ConcertChatTests */,
+				677E6ED61CB3140500DCA2FB /* ConcertChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		677E6EB11CB3140500DCA2FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677E6EC61CB3140500DCA2FB /* LaunchScreen.storyboard in Resources */,
+				677E6EC31CB3140500DCA2FB /* Assets.xcassets in Resources */,
+				677E6EC11CB3140500DCA2FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677E6ECA1CB3140500DCA2FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677E6ED51CB3140500DCA2FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45BDE8F0EE7005875ADE40D4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		65FDF54A4C460B0E68F0AD95 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcertChat/Pods-ConcertChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9308119D8F856003C85E9728 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcertChat/Pods-ConcertChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		677E6EAF1CB3140500DCA2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677E6EBE1CB3140500DCA2FB /* ViewController.m in Sources */,
+				677E6EBB1CB3140500DCA2FB /* AppDelegate.m in Sources */,
+				67424EAF1CB4725C00E73249 /* ChatViewController.m in Sources */,
+				679F4CC11CB54BCD00DC41ED /* SettingsViewController.m in Sources */,
+				677E6EEB1CB3153A00DCA2FB /* MPCManager.m in Sources */,
+				677E6EB81CB3140500DCA2FB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677E6EC81CB3140500DCA2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677E6ED11CB3140500DCA2FB /* ConcertChatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677E6ED31CB3140500DCA2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				677E6EDC1CB3140500DCA2FB /* ConcertChatUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		677E6ECE1CB3140500DCA2FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 677E6EB21CB3140500DCA2FB /* ConcertChat */;
+			targetProxy = 677E6ECD1CB3140500DCA2FB /* PBXContainerItemProxy */;
+		};
+		677E6ED91CB3140500DCA2FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 677E6EB21CB3140500DCA2FB /* ConcertChat */;
+			targetProxy = 677E6ED81CB3140500DCA2FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		677E6EBF1CB3140500DCA2FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				677E6EC01CB3140500DCA2FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		677E6EC41CB3140500DCA2FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				677E6EC51CB3140500DCA2FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		677E6EDE1CB3140500DCA2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		677E6EDF1CB3140500DCA2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		677E6EE11CB3140500DCA2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 889D40D6BAA5A75A7DB55C29 /* Pods-ConcertChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ConcertChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppsByLogan.ConcertChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ConcertChat/ConcertChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		677E6EE21CB3140500DCA2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A233F0D1091A9DF52552CF1 /* Pods-ConcertChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ConcertChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppsByLogan.ConcertChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ConcertChat/ConcertChat-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		677E6EE41CB3140500DCA2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConcertChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppsByLogan.ConcertChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcertChat.app/ConcertChat";
+			};
+			name = Debug;
+		};
+		677E6EE51CB3140500DCA2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConcertChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppsByLogan.ConcertChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcertChat.app/ConcertChat";
+			};
+			name = Release;
+		};
+		677E6EE71CB3140500DCA2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ConcertChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppsByLogan.ConcertChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ConcertChat;
+			};
+			name = Debug;
+		};
+		677E6EE81CB3140500DCA2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ConcertChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppsByLogan.ConcertChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ConcertChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		677E6EAE1CB3140500DCA2FB /* Build configuration list for PBXProject "ConcertChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				677E6EDE1CB3140500DCA2FB /* Debug */,
+				677E6EDF1CB3140500DCA2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		677E6EE01CB3140500DCA2FB /* Build configuration list for PBXNativeTarget "ConcertChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				677E6EE11CB3140500DCA2FB /* Debug */,
+				677E6EE21CB3140500DCA2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		677E6EE31CB3140500DCA2FB /* Build configuration list for PBXNativeTarget "ConcertChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				677E6EE41CB3140500DCA2FB /* Debug */,
+				677E6EE51CB3140500DCA2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		677E6EE61CB3140500DCA2FB /* Build configuration list for PBXNativeTarget "ConcertChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				677E6EE71CB3140500DCA2FB /* Debug */,
+				677E6EE81CB3140500DCA2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 677E6EAB1CB3140500DCA2FB /* Project object */;
+}
