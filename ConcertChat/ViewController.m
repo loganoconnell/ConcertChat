@@ -19,6 +19,7 @@
     self.title = @"Chat";
     
     self.tabBarController.tabBar.tintColor = UIColorFromRGB(0x212121);
+    self.tabBarController.delegate = self;
     
     self.extendedLayoutIncludesOpaqueBars = YES;
     
@@ -134,9 +135,11 @@
 }
 
 - (void)presentAlertWithMessage:(NSString *)message {
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
     
     alert.customViewColor = UIColorFromRGB(0xF44336);
+    
+    alert.statusBarHidden = YES;
     
     [alert showInfo:self.tabBarController title:@"" subTitle:message closeButtonTitle:@"OK" duration:0];
 }
@@ -180,6 +183,15 @@
         chatVC.senderDisplayName = [userDefaults objectForKey:@"nickname"];
         chatVC.senderId = [userDefaults objectForKey:@"uuid"];
     }
+}
+
+// MARK UITabBarControllerDelegate
+- (BOOL)tabBarController:(UITabBarController *)theTabBarController shouldSelectViewController:(UIViewController *)viewController {
+    if (self != self.navigationController.visibleViewController) {
+        return NO;
+    }
+    
+    return YES;
 }
 
 // MARK UITableViewDelegate/UITableViewDataSource
@@ -235,8 +247,14 @@
     
     self.selectedCellIndex = indexPath;
     
-    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    self.hud.labelText = @"Connecting...";
+    if ([MBProgressHUD HUDForView:self.view]) {
+        [[MBProgressHUD HUDForView:self.view] show:YES];
+    }
+    
+    else {
+        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        self.hud.labelText = @"Connecting...";
+    }
 }
 
 // MARK: MPCManagerDelegate
@@ -266,22 +284,35 @@
         
         NSString *message = [NSString stringWithFormat:@"%@ wants to chat with you.", [fromPeer componentsSeparatedByString:@":"][0]];
     
-        SCLAlertView *alert = [[SCLAlertView alloc] init];
-    
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
+        
         alert.customViewColor = UIColorFromRGB(0xF44336);
+        
+        alert.statusBarHidden = YES;
     
         [alert addButton:@"Accept" actionBlock:^{
+            if (self != self.navigationController.visibleViewController) {
+                ChatViewController *chatVC = (ChatViewController *)self.navigationController.visibleViewController;
+                [chatVC endChat:nil];
+            }
+            
             appDelegate.manager.invitationHandler(YES, appDelegate.manager.session);
             
-            self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-            self.hud.labelText = @"Connecting...";
+            if ([MBProgressHUD HUDForView:self.view]) {
+                [[MBProgressHUD HUDForView:self.view] show:YES];
+            }
+            
+            else {
+                self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                self.hud.labelText = @"Connecting...";
+            }
         }];
         
         [alert addButton:@"Decline" actionBlock:^{
             appDelegate.manager.invitationHandler(NO, appDelegate.manager.session);
         }];
     
-        [alert showInfo:self.tabBarController title:@"" subTitle:message closeButtonTitle:nil duration:0];
+        [alert showQuestion:self.tabBarController title:@"" subTitle:message closeButtonTitle:nil duration:0];
     }];
 }
 

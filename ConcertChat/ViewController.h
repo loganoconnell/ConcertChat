@@ -12,7 +12,7 @@
 #import "ChatViewController.h"
 #import "MPCManager.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MPCManagerDelegate>
+@interface ViewController : UIViewController <UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MPCManagerDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *peersTableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
@@ -26,7 +26,6 @@
 
 @property (nonatomic) BOOL isAdvertising;
 @property (nonatomic) BOOL isSearching;
-@property (nonatomic) BOOL wantsToBeDisconnected;
 
 - (void)askForNicknameWithError:(BOOL)error;
 @end

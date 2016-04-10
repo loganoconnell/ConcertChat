@@ -18,7 +18,6 @@
         switch (indexPath.row) {
             case 0:
                 cell.textLabel.text = @"Change nickname";
-                cell.textLabel.textColor = UIColorFromRGB(0xF44336);
                 
                 break;
             default:
@@ -30,17 +29,14 @@
         switch (indexPath.row) {
             case 0:
                 cell.textLabel.text = @"Email support";
-                cell.textLabel.textColor = UIColorFromRGB(0xF44336);
                 
                 break;
             case 1:
                 cell.textLabel.text = @"Follow @logandev22";
-                cell.textLabel.textColor = UIColorFromRGB(0xF44336);
                 
                 break;
             case 2:
                 cell.textLabel.text = @"View app on Github";
-                cell.textLabel.textColor = UIColorFromRGB(0xF44336);
                 
                 break;
             default:
@@ -128,6 +124,8 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"idSettingsCell"];
     }
+    
+    cell.textLabel.textColor = UIColorFromRGB(0xF44336);
     
     [self configureCell:cell forIndexPath:indexPath];
     

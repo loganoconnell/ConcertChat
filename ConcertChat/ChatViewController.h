@@ -18,4 +18,5 @@
 @property (nonatomic, strong) NSString *setupPeerName;
 
 - (void)endChatFromPeer:(NSString *)peerName;
+- (void)endChat:(id)sender;
 @end

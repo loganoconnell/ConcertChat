@@ -43,6 +43,11 @@
     self.pickerController.delegate = self;
     self.pickerController.allowsEditing = YES;
     
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapCamera:)];
+    doubleTap.numberOfTapsRequired = 2;
+    doubleTap.delegate = self;
+    [self.pickerController.view addGestureRecognizer:doubleTap];
+    
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         self.pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
     }
@@ -92,9 +97,11 @@
     NSString *message = [NSString stringWithFormat:@"%@ ended this chat.", peerName];
     
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
         
         alert.customViewColor = UIColorFromRGB(0xF44336);
+        
+        alert.statusBarHidden = YES;
         
         [self.inputToolbar.contentView.textView resignFirstResponder];
         
@@ -159,10 +166,50 @@
     imageInfo.referenceRect = cell.frame;
     imageInfo.referenceView = cell.superview;
 
-    JTSImageViewController *imageVC = [[JTSImageViewController alloc] initWithImageInfo:imageInfo mode:JTSImageViewControllerMode_Image backgroundStyle:JTSImageViewControllerBackgroundOption_Blurred];
+    JTSImageViewController *imageVC = [[JTSImageViewController alloc] initWithImageInfo:imageInfo mode:JTSImageViewControllerMode_Image backgroundStyle:JTSImageViewControllerBackgroundOption_None];
     
     [imageVC showFromViewController:self transition:JTSImageViewControllerTransition_FromOriginalPosition];
 
+}
+
+- (void)handleImageLongPress:(UILongPressGestureRecognizer *)sender {
+    if (sender.state != UIGestureRecognizerStateBegan) {
+        return;
+    }
+    
+    JSQMessagesCollectionViewCell *cell = (JSQMessagesCollectionViewCell *)sender.view;
+    
+    NSDictionary *currentMessage = self.messages[[self.collectionView indexPathForCell:cell].row];
+    
+    UIImage *tappedImage = [UIImage imageWithData:currentMessage[@"imageData"]];
+    
+    NSString *message = @"Save this photo to your Camera Roll?";
+    
+    SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
+        
+    alert.customViewColor = UIColorFromRGB(0xF44336);
+        
+    alert.statusBarHidden = YES;
+        
+    [self.inputToolbar.contentView.textView resignFirstResponder];
+        
+    [alert addButton:@"Yes" actionBlock:^{
+        UIImageWriteToSavedPhotosAlbum(tappedImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    }];
+        
+    [alert showQuestion:self.tabBarController title:@"" subTitle:message closeButtonTitle:@"No" duration:0];
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    NSString *message = @"Saved!";
+    
+    SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
+    
+    alert.customViewColor = UIColorFromRGB(0xF44336);
+    
+    alert.statusBarHidden = YES;
+    
+    [alert showInfo:self.tabBarController title:@"" subTitle:message closeButtonTitle:nil duration:1];
 }
 
 // MARK: JSQMessagesCollectionViewCellDelegate
@@ -203,21 +250,42 @@
 }
 
 - (void)didPressAccessoryButton:(UIButton *)sender {
-    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapCamera:)];
-    doubleTap.numberOfTapsRequired = 2;
-    doubleTap.delegate = self;
-    [self.pickerController.view addGestureRecognizer:doubleTap];
+    NSString *message = @"Pick photo from:";
     
-    [self presentViewController:self.pickerController animated:YES completion:nil];
+    SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
+        
+    alert.customViewColor = UIColorFromRGB(0xF44336);
+        
+    alert.statusBarHidden = YES;
+        
+    [self.inputToolbar.contentView.textView resignFirstResponder];
+        
+    [alert addButton:@"Photo Library" actionBlock:^{
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+            self.pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+        
+        [self presentViewController:self.pickerController animated:YES completion:nil];
+    }];
+        
+    [alert addButton:@"Take Photo or Video" actionBlock:^{
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            self.pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        }
+        
+        [self presentViewController:self.pickerController animated:YES completion:nil];
+    }];
+        
+    [alert showQuestion:self.tabBarController title:@"" subTitle:message closeButtonTitle:@"Cancel" duration:0];
 }
 
 - (void)handleDoubleTapCamera:(UITapGestureRecognizer *)sender {
-    if (self.pickerController.cameraDevice == UIImagePickerControllerCameraDeviceRear) {
-        self.pickerController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    if (self.pickerController.cameraDevice == UIImagePickerControllerCameraDeviceFront) {
+        self.pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
     }
     
     else {
-        self.pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        self.pickerController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
     }
 }
 
@@ -239,6 +307,10 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleImageTap:)];
         tap.delegate = self;
         [cell addGestureRecognizer:tap];
+        
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleImageLongPress:)];
+        longPress.delegate = self;
+        [cell addGestureRecognizer:longPress];
     }
     
     return cell;
@@ -310,7 +382,7 @@
     
     if (indexPath.row == lastIndexRowNumber) {
         return [[NSAttributedString alloc] initWithString
-                :@"Delivered" attributes:@{NSForegroundColorAttributeName: UIColorFromRGB(0x212121)}];
+                :@"Sent" attributes:@{NSForegroundColorAttributeName: UIColorFromRGB(0x212121)}];
     }
     
     return nil;

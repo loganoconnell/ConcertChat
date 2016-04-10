@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ChatViewController.m"
-            timestampString = "481761676.393577"
+            timestampString = "481908012.013586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "-handleMPCReceivedDataNotification:"
             landmarkType = "5">
          </BreakpointContent>
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ViewController.m"
-            timestampString = "481860603.448924"
+            timestampString = "481908847.903513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
             landmarkName = "-failedToConnectWithPeer:"
             landmarkType = "5">
             <Locations>
@@ -52,16 +52,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController failedToConnectWithPeer:]"
+                  symbolName = "__42-[ViewController failedToConnectWithPeer:]_block_invoke"
                   moduleName = "ConcertChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/loganoconnell/Documents/Coding/iOS%20Apps/ConcertChat/ConcertChat/ViewController.m"
-                  timestampString = "481860603.464916"
+                  timestampString = "481906195.958936"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "302"
-                  endingLineNumber = "302"
-                  offsetFromSymbolStart = "155">
+                  startingLineNumber = "324"
+                  endingLineNumber = "324"
+                  offsetFromSymbolStart = "264">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -71,12 +71,12 @@
                   moduleName = "ConcertChat"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/loganoconnell/Documents/Coding/iOS%20Apps/ConcertChat/ConcertChat/ViewController.m"
-                  timestampString = "481860603.465138"
+                  timestampString = "481906195.959191"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "302"
-                  endingLineNumber = "302"
-                  offsetFromSymbolStart = "12">
+                  startingLineNumber = "324"
+                  endingLineNumber = "324"
+                  offsetFromSymbolStart = "272">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ViewController.m"
-            timestampString = "481860603.448924"
+            timestampString = "481908847.903513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
+            startingLineNumber = "332"
+            endingLineNumber = "332"
             landmarkName = "-failedToConnectWithPeer:"
             landmarkType = "5">
          </BreakpointContent>
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ViewController.m"
-            timestampString = "481860603.448924"
+            timestampString = "481908847.903513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
             landmarkName = "-failedToConnectWithPeer:"
             landmarkType = "5">
          </BreakpointContent>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ViewController.m"
-            timestampString = "481860603.448924"
+            timestampString = "481908847.903513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
             landmarkName = "-failedToConnectWithPeer:"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,13 +200,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ViewController.m"
-            timestampString = "481860603.448924"
+            timestampString = "481908847.903513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
             landmarkName = "-connectedWithPeer:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController failedToConnectWithPeer:]"
+                  moduleName = "ConcertChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/loganoconnell/Documents/Coding/iOS%20Apps/ConcertChat/ConcertChat/ViewController.m"
+                  timestampString = "481906195.970567"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "321"
+                  endingLineNumber = "321"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__42-[ViewController failedToConnectWithPeer:]_block_invoke"
+                  moduleName = "ConcertChat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/loganoconnell/Documents/Coding/iOS%20Apps/ConcertChat/ConcertChat/ViewController.m"
+                  timestampString = "481906195.970755"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "321"
+                  endingLineNumber = "321"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -216,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ChatViewController.m"
-            timestampString = "481860683.186345"
+            timestampString = "481908012.013586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
             landmarkName = "-collectionView:attributedTextForCellBottomLabelAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -232,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ChatViewController.m"
-            timestampString = "481860683.186345"
+            timestampString = "481908012.013586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "374"
+            endingLineNumber = "374"
             landmarkName = "-collectionView:attributedTextForCellBottomLabelAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -248,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ChatViewController.m"
-            timestampString = "481860683.186345"
+            timestampString = "481908012.013586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "376"
+            endingLineNumber = "376"
             landmarkName = "-collectionView:attributedTextForCellBottomLabelAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -264,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ChatViewController.m"
-            timestampString = "481860683.186345"
+            timestampString = "481908012.013586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
             landmarkName = "-collectionView:attributedTextForCellBottomLabelAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -280,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ChatViewController.m"
-            timestampString = "481860683.186345"
+            timestampString = "481908012.013586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "-collectionView:attributedTextForCellBottomLabelAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ChatViewController.m"
-            timestampString = "481860683.186345"
+            timestampString = "481908012.013586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "-collectionView:attributedTextForCellBottomLabelAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -312,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConcertChat/ChatViewController.m"
-            timestampString = "481860683.186345"
+            timestampString = "481908012.013586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "-collectionView:attributedTextForCellBottomLabelAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
