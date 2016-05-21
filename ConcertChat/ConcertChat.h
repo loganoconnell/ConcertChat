@@ -9,6 +9,12 @@
 #ifndef ConcertChat_h
 #define ConcertChat_h
 
+#define PRODUCTION_MODE 0
+
+#ifdef PRODUCTION_MODE
+    #define NSLog(...)
+#endif
+
 #define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 #define userDefaults [NSUserDefaults standardUserDefaults]
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255 green:((float)((rgbValue & 0xFF00) >> 8))/255 blue:((float)(rgbValue & 0xFF))/255 alpha:1]
@@ -28,8 +34,15 @@
 
 #import <SCLAlertView-Objective-C/SCLAlertView.h>
 
-#import <MBProgressHUD/MBProgressHUD.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #import <JTSImageViewController/JTSImageViewController.h>
+
+#import <UITableView-NXEmptyView/UITableView+NXEmptyView.h>
+
+#import <EAIntroView/EAIntroView.h>
+
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 #endif /* ConcertChat_h */

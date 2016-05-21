@@ -15,13 +15,12 @@
 
 - (UITableViewCell *)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        switch (indexPath.row) {
-            case 0:
-                cell.textLabel.text = @"Change nickname";
-                
-                break;
-            default:
-                break;
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"Change nickname";
+        }
+        
+        else {
+            cell.textLabel.text = @"View tutorial";
         }
     }
     
@@ -51,11 +50,19 @@
     [(ViewController *)((UINavigationController *)self.tabBarController.viewControllers.firstObject).viewControllers.firstObject askForNicknameWithError:NO];
 }
 
+- (void)showTutorial {
+    [(ViewController *)((UINavigationController *)self.tabBarController.viewControllers.firstObject).viewControllers.firstObject showTutorialView];
+}
+
 // MARK: UITableViewDelegate/UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             [self showChangeNicknameAlert];
+        }
+        
+        else {
+            [self showTutorial];
         }
     }
     
@@ -106,7 +113,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 1;
+        return 2;
     }
     
     else if (section == 1) {
@@ -134,7 +141,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return @"Nickname";
+        return @"General";
     }
     
     else if (section == 1) {

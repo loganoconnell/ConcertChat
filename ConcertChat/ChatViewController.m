@@ -17,8 +17,7 @@
     }
     
     else {
-        [self endChatFromPeer:self.setupPeerName]
-        ;
+        [self endChatFromPeer:self.setupPeerName];
     }
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(endChat:)];

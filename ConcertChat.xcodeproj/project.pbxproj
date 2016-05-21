@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4EDA1311C26735EA43199690 /* libPods-ConcertChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */; };
 		67424EAF1CB4725C00E73249 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67424EAE1CB4725C00E73249 /* ChatViewController.m */; };
+		677B979E1CEDFD36003ABC10 /* Concert1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B979A1CEDFD36003ABC10 /* Concert1.jpg */; };
+		677B979F1CEDFD36003ABC10 /* Concert2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B979B1CEDFD36003ABC10 /* Concert2.jpg */; };
+		677B97A01CEDFD36003ABC10 /* Concert3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B979C1CEDFD36003ABC10 /* Concert3.jpg */; };
+		677B97A11CEDFD36003ABC10 /* Concert4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B979D1CEDFD36003ABC10 /* Concert4.jpg */; };
 		677E6EB81CB3140500DCA2FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6EB71CB3140500DCA2FB /* main.m */; };
 		677E6EBB1CB3140500DCA2FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6EBA1CB3140500DCA2FB /* AppDelegate.m */; };
 		677E6EBE1CB3140500DCA2FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 677E6EBD1CB3140500DCA2FB /* ViewController.m */; };
@@ -42,6 +46,10 @@
 		2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConcertChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67424EAD1CB4725C00E73249 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		67424EAE1CB4725C00E73249 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		677B979A1CEDFD36003ABC10 /* Concert1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Concert1.jpg; sourceTree = "<group>"; };
+		677B979B1CEDFD36003ABC10 /* Concert2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Concert2.jpg; sourceTree = "<group>"; };
+		677B979C1CEDFD36003ABC10 /* Concert3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Concert3.jpg; sourceTree = "<group>"; };
+		677B979D1CEDFD36003ABC10 /* Concert4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Concert4.jpg; sourceTree = "<group>"; };
 		677E6EB31CB3140500DCA2FB /* ConcertChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcertChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677E6EB71CB3140500DCA2FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		677E6EB91CB3140500DCA2FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +102,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		677B97991CEDFD36003ABC10 /* Background Images */ = {
+			isa = PBXGroup;
+			children = (
+				677B979A1CEDFD36003ABC10 /* Concert1.jpg */,
+				677B979B1CEDFD36003ABC10 /* Concert2.jpg */,
+				677B979C1CEDFD36003ABC10 /* Concert3.jpg */,
+				677B979D1CEDFD36003ABC10 /* Concert4.jpg */,
+			);
+			path = "Background Images";
+			sourceTree = "<group>";
+		};
 		677E6EAA1CB3140500DCA2FB = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +151,7 @@
 				677E6EEA1CB3153A00DCA2FB /* MPCManager.m */,
 				677E6EBF1CB3140500DCA2FB /* Main.storyboard */,
 				677E6EC41CB3140500DCA2FB /* LaunchScreen.storyboard */,
+				677B97991CEDFD36003ABC10 /* Background Images */,
 				677E6EC21CB3140500DCA2FB /* Assets.xcassets */,
 				677E6EC71CB3140500DCA2FB /* Info.plist */,
 				677E6EB61CB3140500DCA2FB /* Supporting Files */,
@@ -196,6 +216,7 @@
 				677E6EB11CB3140500DCA2FB /* Resources */,
 				9308119D8F856003C85E9728 /* Embed Pods Frameworks */,
 				65FDF54A4C460B0E68F0AD95 /* Copy Pods Resources */,
+				67E95BFF1CEFF3B90074E061 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -297,8 +318,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677B97A01CEDFD36003ABC10 /* Concert3.jpg in Resources */,
+				677B979F1CEDFD36003ABC10 /* Concert2.jpg in Resources */,
+				677B97A11CEDFD36003ABC10 /* Concert4.jpg in Resources */,
 				677E6EC61CB3140500DCA2FB /* LaunchScreen.storyboard in Resources */,
 				677E6EC31CB3140500DCA2FB /* Assets.xcassets in Resources */,
+				677B979E1CEDFD36003ABC10 /* Concert1.jpg in Resources */,
 				677E6EC11CB3140500DCA2FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +374,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConcertChat/Pods-ConcertChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		67E95BFF1CEFF3B90074E061 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 993c2b93895f428c98324685ea0db58326d5e123 7cc91b4c2aca4ce4c6ab3a0621302f4aac89de9474511ad76c8f65ba8b0d7802";
 		};
 		9308119D8F856003C85E9728 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -520,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = ConcertChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

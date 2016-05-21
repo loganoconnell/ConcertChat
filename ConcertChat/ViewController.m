@@ -23,8 +23,17 @@
     
     self.extendedLayoutIncludesOpaqueBars = YES;
     
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setBackgroundColor:UIColorFromRGB(0x212121)];
+    
+    self.noDataView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self setupNoDataView];
+    
+    self.peersTableView.nxEV_emptyView = self.noDataView;
+    self.peersTableView.tableFooterView = [UIView new];
+    
     if (![userDefaults objectForKey:@"nickname"]) {
-        [self askForNicknameWithError:NO];
+        [self showTutorialView];
     }
     
     else {
@@ -35,6 +44,113 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+        self.noDataImage.hidden = YES;
+        
+        self.noDataLabel.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100);
+    }
+    
+    else {
+        self.noDataImage.hidden = NO;
+        
+        self.noDataLabel.frame = CGRectMake(0, 188, [UIScreen mainScreen].bounds.size.width, 100);
+    }
+}
+
+- (void)showTutorialView {
+    EAIntroView *intro = [[EAIntroView alloc] initWithFrame:self.view.bounds];
+    
+    EAIntroPage *page1 = [EAIntroPage page];
+    page1.title = @"Welcome to ConcertChat";
+    page1.titlePositionY = 420;
+    page1.titleFont = [UIFont boldSystemFontOfSize:20];
+    page1.desc = @"Are you ready to party? Let's teach you how to get started!";
+    page1.descPositionY = 400;
+    page1.descFont = [UIFont systemFontOfSize:15];
+    page1.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
+    CGRect alteredFrame1 = page1.titleIconView.frame;
+    alteredFrame1.size.width = 50;
+    alteredFrame1.size.height = 50;
+    page1.titleIconView.frame = alteredFrame1;
+    page1.titleIconPositionY = 75;
+    page1.bgImage = [UIImage imageNamed:@"Concert1.jpg"];
+    
+    EAIntroPage *page2 = [EAIntroPage page];
+    page2.title = @"How to Start";
+    page2.titlePositionY = 420;
+    page2.titleFont = [UIFont boldSystemFontOfSize:20];
+    page2.desc = @"Once this tutorial is finished, you will be presented with a list of available devices around you. Touch a device and you will attempt to connect with it.";
+    page2.descPositionY = 400;
+    page2.descFont = [UIFont systemFontOfSize:15];
+    page2.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
+    CGRect alteredFrame2 = page2.titleIconView.frame;
+    alteredFrame2.size.width = 50;
+    alteredFrame2.size.height = 50;
+    page2.titleIconView.frame = alteredFrame2;
+    page2.titleIconPositionY = 75;
+    page2.bgImage = [UIImage imageNamed:@"Concert2.jpg"];
+    
+    EAIntroPage *page3 = [EAIntroPage page];
+    page3.title = @"How to Chat";
+    page3.titlePositionY = 420;
+    page3.titleFont = [UIFont boldSystemFontOfSize:20];
+    page3.desc = @"Once your device connects to another, you can chat with the person you connected with, and go find them to party with!";
+    page3.descPositionY = 400;
+    page3.descFont = [UIFont systemFontOfSize:15];
+    page3.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
+    CGRect alteredFrame3 = page3.titleIconView.frame;
+    alteredFrame3.size.width = 50;
+    alteredFrame3.size.height = 50;
+    page3.titleIconView.frame = alteredFrame3;
+    page3.titleIconPositionY = 75;
+    page3.bgImage = [UIImage imageNamed:@"Concert3.jpg"];
+    
+    EAIntroPage *page4 = [EAIntroPage page];
+    page4.title = @"That's it!";
+    page4.titlePositionY = 420;
+    page4.titleFont = [UIFont boldSystemFontOfSize:20];
+    page4.desc = @"Now go get partying!";
+    page4.descPositionY = 400;
+    page4.descFont = [UIFont systemFontOfSize:15];
+    page4.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
+    CGRect alteredFrame4 = page4.titleIconView.frame;
+    alteredFrame4.size.width = 50;
+    alteredFrame4.size.height = 50;
+    page4.titleIconView.frame = alteredFrame4;
+    page4.titleIconPositionY = 75;
+    page4.bgImage = [UIImage imageNamed:@"Concert4.jpg"];
+    page4.onPageDidAppear = ^{
+        intro.skipButton.hidden = YES;
+    };
+    page4.onPageDidDisappear = ^{
+        intro.skipButton.hidden = NO;
+    };
+    
+    intro.pages = @[page1, page2, page3, page4];
+    intro.delegate = self;
+    [intro showInView:self.tabBarController.view];
+}
+
+- (void)setupNoDataView {
+    self.noDataView.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin);
+    self.noDataView.center = self.peersTableView.center;
+    
+    self.noDataImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AppIcon60x60"]];
+    self.noDataImage.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 100) / 2, 88, 100, 100);
+    [self.noDataView addSubview:self.noDataImage];
+    
+    self.noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 188, [UIScreen mainScreen].bounds.size.width, 100)];
+    self.noDataLabel.text = @"No devices found :(";
+    self.noDataLabel.textAlignment = NSTextAlignmentCenter;
+    self.noDataLabel.font = [UIFont italicSystemFontOfSize:18
+                             ];
+    self.noDataLabel.textColor = UIColorFromRGB(0xB6B6B6);
+    [self.noDataView addSubview:self.noDataLabel];
 }
 
 - (void)askForNicknameWithError:(BOOL)error {
@@ -55,7 +171,7 @@
     textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     textField.autocorrectionType = UITextAutocorrectionTypeNo;
     
-    [textField performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.5];
+    [textField performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.1];
     
     if ([userDefaults objectForKey:@"nickname"]) {
         [alert addButton:@"OK" actionBlock:^{
@@ -225,6 +341,7 @@
     
     cell.textLabel.text = [text componentsSeparatedByString:@":"][0];
     cell.detailTextLabel.text = [text componentsSeparatedByString:@":"][1];
+    cell.imageView.image = [UIImage imageNamed:@"Phone"];
     
     return cell;
 }
@@ -247,14 +364,7 @@
     
     self.selectedCellIndex = indexPath;
     
-    if ([MBProgressHUD HUDForView:self.view]) {
-        [[MBProgressHUD HUDForView:self.view] show:YES];
-    }
-    
-    else {
-        self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        self.hud.labelText = @"Connecting...";
-    }
+    [SVProgressHUD showWithStatus:@"Connecting..."];
 }
 
 // MARK: MPCManagerDelegate
@@ -298,14 +408,7 @@
             
             appDelegate.manager.invitationHandler(YES, appDelegate.manager.session);
             
-            if ([MBProgressHUD HUDForView:self.view]) {
-                [[MBProgressHUD HUDForView:self.view] show:YES];
-            }
-            
-            else {
-                self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-                self.hud.labelText = @"Connecting...";
-            }
+            [SVProgressHUD showWithStatus:@"Connecting..."];
         }];
         
         [alert addButton:@"Decline" actionBlock:^{
@@ -322,9 +425,7 @@
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.peersTableView cellForRowAtIndexPath:self.selectedCellIndex].selected = NO;
             
-        for (MBProgressHUD *hud in [MBProgressHUD allHUDsForView:self.view]) {
-            [hud hide:YES];
-        }
+        [SVProgressHUD dismiss];
         
         [self performSegueWithIdentifier:@"idChatSegue" sender:self];
     }];
@@ -335,9 +436,7 @@
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self.peersTableView cellForRowAtIndexPath:self.selectedCellIndex].selected = NO;
             
-            for (MBProgressHUD *hud in [MBProgressHUD allHUDsForView:self.view]) {
-                [hud hide:YES];
-            }
+            [SVProgressHUD dismiss];
             
             [self presentAlertWithMessage:[NSString stringWithFormat:@"Failed to connect with %@.", [peerID.displayName componentsSeparatedByString:@":"][0]]];
         }];
@@ -386,6 +485,13 @@
         if ([[[peer.displayName componentsSeparatedByString:@":"][1] lowercaseString] containsString:[searchText lowercaseString]] && ![self.searchResults containsObject:peer]) {
             [self.searchResults addObject:peer];
         }
+    }
+}
+
+// MARK: EAIntroDelegate
+- (void)introDidFinish:(EAIntroView *)introView {
+    if (![userDefaults objectForKey:@"nickname"]) {
+        [self askForNicknameWithError:NO];
     }
 }
 @end

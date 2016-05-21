@@ -12,13 +12,15 @@
 #import "ChatViewController.h"
 #import "MPCManager.h"
 
-@interface ViewController : UIViewController <UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MPCManagerDelegate>
+@interface ViewController : UIViewController <UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MPCManagerDelegate, EAIntroDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *peersTableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
-@property (nonatomic, strong) NSMutableArray<MCPeerID *> *searchResults;
+@property (nonatomic, strong) UIView *noDataView;
+@property (nonatomic, strong) UIImageView *noDataImage;
+@property (nonatomic, strong) UILabel *noDataLabel;
 
-@property (nonatomic, strong) MBProgressHUD *hud;
+@property (nonatomic, strong) NSMutableArray<MCPeerID *> *searchResults;
 
 @property (nonatomic, strong) NSIndexPath *selectedCellIndex;
 
@@ -28,4 +30,5 @@
 @property (nonatomic) BOOL isSearching;
 
 - (void)askForNicknameWithError:(BOOL)error;
+- (void)showTutorialView;
 @end
