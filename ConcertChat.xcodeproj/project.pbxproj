@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4EDA1311C26735EA43199690 /* libPods-ConcertChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */; };
+		6724A2431CF76FE30051D837 /* TweetsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6724A2421CF76FE30051D837 /* TweetsNavigationController.m */; };
 		67424EAF1CB4725C00E73249 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67424EAE1CB4725C00E73249 /* ChatViewController.m */; };
 		677B979E1CEDFD36003ABC10 /* Concert1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B979A1CEDFD36003ABC10 /* Concert1.jpg */; };
 		677B979F1CEDFD36003ABC10 /* Concert2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B979B1CEDFD36003ABC10 /* Concert2.jpg */; };
@@ -44,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConcertChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6724A2411CF76FE30051D837 /* TweetsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsNavigationController.h; sourceTree = "<group>"; };
+		6724A2421CF76FE30051D837 /* TweetsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsNavigationController.m; sourceTree = "<group>"; };
 		67424EAD1CB4725C00E73249 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		67424EAE1CB4725C00E73249 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		677B979A1CEDFD36003ABC10 /* Concert1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Concert1.jpg; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				677E6EBD1CB3140500DCA2FB /* ViewController.m */,
 				67424EAD1CB4725C00E73249 /* ChatViewController.h */,
 				67424EAE1CB4725C00E73249 /* ChatViewController.m */,
+				6724A2411CF76FE30051D837 /* TweetsNavigationController.h */,
+				6724A2421CF76FE30051D837 /* TweetsNavigationController.m */,
 				679F4CBF1CB54BCD00DC41ED /* SettingsViewController.h */,
 				679F4CC01CB54BCD00DC41ED /* SettingsViewController.m */,
 				677E6EE91CB3153A00DCA2FB /* MPCManager.h */,
@@ -416,6 +421,7 @@
 				679F4CC11CB54BCD00DC41ED /* SettingsViewController.m in Sources */,
 				677E6EEB1CB3153A00DCA2FB /* MPCManager.m in Sources */,
 				677E6EB81CB3140500DCA2FB /* main.m in Sources */,
+				6724A2431CF76FE30051D837 /* TweetsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

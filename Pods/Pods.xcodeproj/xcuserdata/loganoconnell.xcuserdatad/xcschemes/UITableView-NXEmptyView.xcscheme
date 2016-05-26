@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0E3328CEA906FB1828D51006'
+               BlueprintIdentifier = 'E7CEADD4846C475C9584E520'
                BlueprintName = 'UITableView-NXEmptyView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libUITableView-NXEmptyView.a'>

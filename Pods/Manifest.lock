@@ -11,6 +11,10 @@ PODS:
   - JTSImageViewController (1.5.1)
   - SCLAlertView-Objective-C (1.0.2)
   - SVProgressHUD (2.0.3)
+  - TwitterCore (2.1.1):
+    - Fabric
+  - TwitterKit (2.1.1):
+    - TwitterCore (= 2.1.1)
   - UITableView-NXEmptyView (0.1.7)
 
 DEPENDENCIES:
@@ -21,6 +25,8 @@ DEPENDENCIES:
   - JTSImageViewController
   - SCLAlertView-Objective-C
   - SVProgressHUD
+  - TwitterCore
+  - TwitterKit
   - UITableView-NXEmptyView
 
 SPEC CHECKSUMS:
@@ -33,6 +39,8 @@ SPEC CHECKSUMS:
   JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
   SCLAlertView-Objective-C: 25f7ea3a3526dde177d8b8056a0b88fe4187651e
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  TwitterCore: abc46da2bc4b76e2c68a74cd8671a071a8e3abbf
+  TwitterKit: 38232c31f622db1f26a5952436eaa88d10763fd0
   UITableView-NXEmptyView: 0bc404cfd9c201af518a63240ac4ac4dad2c69c2
 
 COCOAPODS: 0.39.0

@@ -171,7 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fI-CG-fp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006.5" y="661.5"/>
+            <point key="canvasLocation" x="1006.5" y="499.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zzb-ZW-AEo">
@@ -194,7 +194,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hak-bn-KCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006.5" y="1319.25"/>
+            <point key="canvasLocation" x="1006.5" y="1556.25"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="62w-eN-uwr">
@@ -205,6 +205,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyt-TP-gyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3241.5" y="349.5"/>
+        </scene>
+        <!--Tweets-->
+        <scene sceneID="5Zd-FU-nUq">
+            <objects>
+                <navigationController title="Tweets" wantsFullScreenLayout="YES" extendedLayoutIncludesOpaqueBars="YES" id="NkM-0R-COc" customClass="TweetsNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tweets" image="Tweets" id="7mC-bP-DKo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ssp-Z3-aTE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNb-kt-TlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="970.5"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="7xp-gp-ljx">
@@ -321,7 +341,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="pZh-Ls-hBi" kind="relationship" relationship="viewControllers" id="Uef-kK-QJQ"/>
-                        <segue destination="s6l-x0-Ozl" kind="relationship" relationship="viewControllers" id="9kM-bQ-TSu"/>
+                        <segue destination="NkM-0R-COc" kind="relationship" relationship="viewControllers" id="PkI-8o-HBP"/>
+                        <segue destination="s6l-x0-Ozl" kind="relationship" relationship="viewControllers" id="FWl-kI-YWQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBX-8A-IFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,6 +353,7 @@
     <resources>
         <image name="ConcertChat" width="30" height="30"/>
         <image name="Settings" width="30" height="30"/>
+        <image name="Tweets" width="30" height="30"/>
         <image name="Visible" width="30" height="30"/>
     </resources>
 </document>

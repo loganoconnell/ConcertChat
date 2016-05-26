@@ -32,6 +32,17 @@
 				<key>KitName</key>
 				<string>Crashlytics</string>
 			</dict>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>consumerKey</key>
+					<string>PxB189Mfm2KMNbkF9e7IdPl1v</string>
+					<key>consumerSecret</key>
+					<string>Ktd8Old9nIWGbcE6jtQ26PRw6ULTGkAhTuDzWVJkJPbfJOO7JU</string>
+				</dict>
+				<key>KitName</key>
+				<string>Twitter</string>
+			</dict>
 		</array>
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
@@ -61,5 +72,15 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>twitter.com</key>
+			<string></string>
+			<key>twimg.com</key>
+			<string></string>
+		</dict>
+	</dict>
 </dict>
 </plist>

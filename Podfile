@@ -9,6 +9,8 @@ pod 'UITableView-NXEmptyView'
 pod 'EAIntroView', '~> 2.8.0'
 pod 'Fabric'
 pod 'Crashlytics'
+pod 'TwitterKit'
+pod 'TwitterCore'
 end
 
 target 'ConcertChatTests' do

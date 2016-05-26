@@ -36,11 +36,16 @@
                 cell.textLabel.text = @"Email support";
                 
                 break;
+                
             case 1:
-                cell.textLabel.text = @"Follow @logandev22";
+                cell.textLabel.text = @"Developer's website";
                 
                 break;
             case 2:
+                cell.textLabel.text = @"Follow @logandev22";
+                
+                break;
+            case 3:
                 cell.textLabel.text = @"View app on Github";
                 
                 break;
@@ -90,10 +95,14 @@
                 
                 break;
             case 1:
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/logandev22"]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://loganoconnell.me"]];
                 
                 break;
             case 2:
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/logandev22"]];
+                
+                break;
+            case 3:
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/loganoconnell/concertchat"]];
                 
                 break;
@@ -127,7 +136,7 @@
     }
     
     else if (section == 1) {
-        return 3;
+        return 4;
     }
     
     else {

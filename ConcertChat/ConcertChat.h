@@ -11,7 +11,7 @@
 
 #define PRODUCTION_MODE 0
 
-#ifdef PRODUCTION_MODE
+#if PRODUCTION_MODE
     #define NSLog(...)
 #endif
 
@@ -44,5 +44,6 @@
 
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import <TwitterKit/TwitterKit.h>
 
 #endif /* ConcertChat_h */

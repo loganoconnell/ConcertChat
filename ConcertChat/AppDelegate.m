@@ -16,7 +16,7 @@
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    [Fabric with:@[[Crashlytics class]]];
+    [Fabric with:@[[Crashlytics class], [Twitter class]]];
     
     return YES;
 }

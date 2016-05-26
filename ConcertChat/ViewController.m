@@ -63,67 +63,85 @@
 
 - (void)showTutorialView {
     EAIntroView *intro = [[EAIntroView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-
+    
+    self.isTutorialInLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
+    
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    
+    CGFloat titleY;
+    CGFloat descY;
+    CGFloat titleIconY;
+    
+    if (self.isTutorialInLandscape) {
+        titleY = screenHeight - 135;
+        descY = screenHeight - 155;
+        titleIconY = 35;
+    }
+    
+    else {
+        titleY = screenHeight - 175;
+        descY = screenHeight - 195;
+        titleIconY = 75;
+    }
     
     EAIntroPage *page1 = [EAIntroPage page];
     page1.title = @"Welcome to ConcertChat";
-    page1.titlePositionY = screenHeight - 175;
+    page1.titlePositionY = titleY;
     page1.titleFont = [UIFont boldSystemFontOfSize:20];
     page1.desc = @"Are you ready to party? Let's teach you how to get started!";
-    page1.descPositionY = screenHeight - 195;
+    page1.descPositionY = descY;
     page1.descFont = [UIFont systemFontOfSize:15];
     page1.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
     CGRect alteredFrame1 = page1.titleIconView.frame;
     alteredFrame1.size.width = 50;
     alteredFrame1.size.height = 50;
     page1.titleIconView.frame = alteredFrame1;
-    page1.titleIconPositionY = 75;
+    page1.titleIconPositionY = titleIconY;
     page1.bgImage = [UIImage imageNamed:@"Concert1.jpg"];
     
     EAIntroPage *page2 = [EAIntroPage page];
     page2.title = @"How to Start";
-    page2.titlePositionY = screenHeight - 175;
+    page2.titlePositionY = titleY;
     page2.titleFont = [UIFont boldSystemFontOfSize:20];
     page2.desc = @"Once this tutorial is finished, you will be presented with a list of available devices around you. Touch a device and you will attempt to connect with it.";
-    page2.descPositionY = screenHeight - 195;
+    page2.descPositionY = descY;
     page2.descFont = [UIFont systemFontOfSize:15];
     page2.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
     CGRect alteredFrame2 = page2.titleIconView.frame;
     alteredFrame2.size.width = 50;
     alteredFrame2.size.height = 50;
     page2.titleIconView.frame = alteredFrame2;
-    page2.titleIconPositionY = 75;
+    page2.titleIconPositionY = titleIconY;
     page2.bgImage = [UIImage imageNamed:@"Concert2.jpg"];
     
     EAIntroPage *page3 = [EAIntroPage page];
     page3.title = @"How to Chat";
-    page3.titlePositionY = screenHeight - 175;
+    page3.titlePositionY = titleY;
     page3.titleFont = [UIFont boldSystemFontOfSize:20];
     page3.desc = @"Once your device connects to another, you can chat with the person you connected with, and go find them to party with!";
-    page3.descPositionY = screenHeight - 195;
+    page3.descPositionY = descY;
     page3.descFont = [UIFont systemFontOfSize:15];
     page3.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
     CGRect alteredFrame3 = page3.titleIconView.frame;
     alteredFrame3.size.width = 50;
     alteredFrame3.size.height = 50;
     page3.titleIconView.frame = alteredFrame3;
-    page3.titleIconPositionY = 75;
+    page3.titleIconPositionY = titleIconY;
     page3.bgImage = [UIImage imageNamed:@"Concert3.jpg"];
     
     EAIntroPage *page4 = [EAIntroPage page];
     page4.title = @"That's it!";
-    page4.titlePositionY = screenHeight - 175;
+    page4.titlePositionY = titleY;
     page4.titleFont = [UIFont boldSystemFontOfSize:20];
     page4.desc = @"Now go get partying!";
-    page4.descPositionY = screenHeight - 195;
+    page4.descPositionY = descY;
     page4.descFont = [UIFont systemFontOfSize:15];
     page4.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
     CGRect alteredFrame4 = page4.titleIconView.frame;
     alteredFrame4.size.width = 50;
     alteredFrame4.size.height = 50;
     page4.titleIconView.frame = alteredFrame4;
-    page4.titleIconPositionY = 75;
+    page4.titleIconPositionY = titleIconY;
     page4.bgImage = [UIImage imageNamed:@"Concert4.jpg"];
     page4.onPageDidAppear = ^{
         intro.skipButton.hidden = YES;
@@ -137,7 +155,6 @@
     [intro showInView:self.tabBarController.view];
     
     self.isShowingTutorial = YES;
-    self.isTutorialInLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
 }
 
 - (void)setupNoDataView {
@@ -229,8 +246,8 @@
     
     alert.statusBarHidden = YES;
     
-    UITextField *textField = [alert addTextField:@"Concert name"];
-    textField.placeholder = @"Concert name";
+    UITextField *textField = [alert addTextField:@"Concert/artist name"];
+    textField.placeholder = @"Concert/artist name";
     
     textField.tintColor = UIColorFromRGB(0xF44336);
     
