@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bNu-XU-D3G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bNu-XU-D3G">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -70,13 +70,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SrU-M8-0IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="60i-R0-yB8"/>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7Lq-Wg-D1l"/>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PVc-7n-efQ"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="T2E-24-jgi"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TTA-ha-rX7"/>
                             <constraint firstAttribute="trailing" secondItem="SrU-M8-0IJ" secondAttribute="trailing" id="Tje-EO-wVd"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VI5-4t-n68"/>
                             <constraint firstItem="SrU-M8-0IJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Z2z-Aw-kaj"/>
+                            <constraint firstAttribute="trailing" secondItem="SrU-M8-0IJ" secondAttribute="trailing" id="c19-MD-7fo"/>
                             <constraint firstItem="SrU-M8-0IJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="h6c-vN-GML"/>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lD6-9j-gs7"/>
-                            <constraint firstAttribute="trailing" secondItem="SrU-M8-0IJ" secondAttribute="trailing" id="zIR-B9-FWt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -84,13 +84,13 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="60i-R0-yB8"/>
-                                <exclude reference="7Lq-Wg-D1l"/>
-                                <exclude reference="PVc-7n-efQ"/>
+                                <exclude reference="T2E-24-jgi"/>
+                                <exclude reference="TTA-ha-rX7"/>
                                 <exclude reference="Tje-EO-wVd"/>
+                                <exclude reference="VI5-4t-n68"/>
                                 <exclude reference="Z2z-Aw-kaj"/>
+                                <exclude reference="c19-MD-7fo"/>
                                 <exclude reference="h6c-vN-GML"/>
-                                <exclude reference="lD6-9j-gs7"/>
-                                <exclude reference="zIR-B9-FWt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -109,10 +109,10 @@
                                 <include reference="SrU-M8-0IJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="7Lq-Wg-D1l"/>
-                                <include reference="PVc-7n-efQ"/>
-                                <include reference="lD6-9j-gs7"/>
-                                <include reference="zIR-B9-FWt"/>
+                                <include reference="T2E-24-jgi"/>
+                                <include reference="TTA-ha-rX7"/>
+                                <include reference="VI5-4t-n68"/>
+                                <include reference="c19-MD-7fo"/>
                             </mask>
                         </variation>
                     </view>

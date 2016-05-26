@@ -25,6 +25,9 @@
     self.inputToolbar.contentView.textView.pasteDelegate = self;
     self.inputToolbar.contentView.textView.tintColor = UIColorFromRGB(0xF44336);
     self.inputToolbar.contentView.textView.textColor = UIColorFromRGB(0x212121);
+    self.inputToolbar.translucent = NO;
+    
+    [self.inputToolbar.contentView.textView performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:1];
     
     [self.inputToolbar.contentView.rightBarButtonItem setTitleColor:UIColorFromRGB(0xF44336) forState:UIControlStateNormal];
     [self.inputToolbar.contentView.rightBarButtonItem setTitleColor:UIColorFromRGB(0xFFCDD2) forState:UIControlStateHighlighted];
@@ -154,6 +157,18 @@
 }
 
 - (void)handleImageTap:(UITapGestureRecognizer *)sender {
+    if ([self.inputToolbar.contentView.textView isFirstResponder]) {
+        [self.inputToolbar.contentView.textView resignFirstResponder];
+        
+        [self performSelector:@selector(presentImageViewController:) withObject:sender afterDelay:0.5];
+    }
+    
+    else {
+        [self presentImageViewController:sender];
+    }
+}
+
+- (void)presentImageViewController:(UITapGestureRecognizer *)sender {
     JSQMessagesCollectionViewCell *cell = (JSQMessagesCollectionViewCell *)sender.view;
     
     NSDictionary *currentMessage = self.messages[[self.collectionView indexPathForCell:cell].row];
@@ -164,11 +179,10 @@
     imageInfo.image = tappedImage;
     imageInfo.referenceRect = cell.frame;
     imageInfo.referenceView = cell.superview;
-
+    
     JTSImageViewController *imageVC = [[JTSImageViewController alloc] initWithImageInfo:imageInfo mode:JTSImageViewControllerMode_Image backgroundStyle:JTSImageViewControllerBackgroundOption_None];
     
     [imageVC showFromViewController:self transition:JTSImageViewControllerTransition_FromOriginalPosition];
-
 }
 
 - (void)handleImageLongPress:(UILongPressGestureRecognizer *)sender {

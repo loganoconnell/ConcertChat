@@ -28,7 +28,10 @@
 
 @property (nonatomic) BOOL isAdvertising;
 @property (nonatomic) BOOL isSearching;
+@property (nonatomic) BOOL isShowingTutorial;
+@property (nonatomic) BOOL isTutorialInLandscape;
 
 - (void)askForNicknameWithError:(BOOL)error;
+- (void)presentAlertWithMessage:(NSString *)message;
 - (void)showTutorialView;
 @end

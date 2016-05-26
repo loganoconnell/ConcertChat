@@ -13,6 +13,12 @@
     self.title = @"Settings";
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    [(ViewController *)((UINavigationController *)self.tabBarController.viewControllers.firstObject).viewControllers.firstObject willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+}
+
 - (UITableViewCell *)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
@@ -76,6 +82,10 @@
                     [composeVC setSubject:@"\"ConcertChat\" Support"];
                     
                     [self presentViewController:composeVC animated:YES completion:nil];
+                }
+                
+                else {
+                    [(ViewController *)((UINavigationController *)self.tabBarController.viewControllers.firstObject).viewControllers.firstObject presentAlertWithMessage:@"You don't have any email accounts set up."];
                 }
                 
                 break;

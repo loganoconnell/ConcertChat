@@ -21,12 +21,11 @@
     self.tabBarController.tabBar.tintColor = UIColorFromRGB(0x212121);
     self.tabBarController.delegate = self;
     
-    self.extendedLayoutIncludesOpaqueBars = YES;
-    
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setBackgroundColor:UIColorFromRGB(0x212121)];
     
-    self.noDataView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.noDataView = [[UIView alloc] initWithFrame:self.peersTableView.frame];
     [self setupNoDataView];
     
     self.peersTableView.nxEV_emptyView = self.noDataView;
@@ -52,25 +51,27 @@
     if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
         self.noDataImage.hidden = YES;
         
-        self.noDataLabel.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100);
+        self.noDataLabel.frame = CGRectMake(0, ([UIScreen mainScreen].bounds.size.height - 100) / 2 - 88, [UIScreen mainScreen].bounds.size.width, 100);
     }
     
     else {
         self.noDataImage.hidden = NO;
         
-        self.noDataLabel.frame = CGRectMake(0, 188, [UIScreen mainScreen].bounds.size.width, 100);
+        self.noDataLabel.frame = CGRectMake(0, ([UIScreen mainScreen].bounds.size.height - 200) / 2 - 8, [UIScreen mainScreen].bounds.size.width, 100);
     }
 }
 
 - (void)showTutorialView {
-    EAIntroView *intro = [[EAIntroView alloc] initWithFrame:self.view.bounds];
+    EAIntroView *intro = [[EAIntroView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     
     EAIntroPage *page1 = [EAIntroPage page];
     page1.title = @"Welcome to ConcertChat";
-    page1.titlePositionY = 420;
+    page1.titlePositionY = screenHeight - 175;
     page1.titleFont = [UIFont boldSystemFontOfSize:20];
     page1.desc = @"Are you ready to party? Let's teach you how to get started!";
-    page1.descPositionY = 400;
+    page1.descPositionY = screenHeight - 195;
     page1.descFont = [UIFont systemFontOfSize:15];
     page1.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
     CGRect alteredFrame1 = page1.titleIconView.frame;
@@ -82,10 +83,10 @@
     
     EAIntroPage *page2 = [EAIntroPage page];
     page2.title = @"How to Start";
-    page2.titlePositionY = 420;
+    page2.titlePositionY = screenHeight - 175;
     page2.titleFont = [UIFont boldSystemFontOfSize:20];
     page2.desc = @"Once this tutorial is finished, you will be presented with a list of available devices around you. Touch a device and you will attempt to connect with it.";
-    page2.descPositionY = 400;
+    page2.descPositionY = screenHeight - 195;
     page2.descFont = [UIFont systemFontOfSize:15];
     page2.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
     CGRect alteredFrame2 = page2.titleIconView.frame;
@@ -97,10 +98,10 @@
     
     EAIntroPage *page3 = [EAIntroPage page];
     page3.title = @"How to Chat";
-    page3.titlePositionY = 420;
+    page3.titlePositionY = screenHeight - 175;
     page3.titleFont = [UIFont boldSystemFontOfSize:20];
     page3.desc = @"Once your device connects to another, you can chat with the person you connected with, and go find them to party with!";
-    page3.descPositionY = 400;
+    page3.descPositionY = screenHeight - 195;
     page3.descFont = [UIFont systemFontOfSize:15];
     page3.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
     CGRect alteredFrame3 = page3.titleIconView.frame;
@@ -112,10 +113,10 @@
     
     EAIntroPage *page4 = [EAIntroPage page];
     page4.title = @"That's it!";
-    page4.titlePositionY = 420;
+    page4.titlePositionY = screenHeight - 175;
     page4.titleFont = [UIFont boldSystemFontOfSize:20];
     page4.desc = @"Now go get partying!";
-    page4.descPositionY = 400;
+    page4.descPositionY = screenHeight - 195;
     page4.descFont = [UIFont systemFontOfSize:15];
     page4.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
     CGRect alteredFrame4 = page4.titleIconView.frame;
@@ -134,6 +135,9 @@
     intro.pages = @[page1, page2, page3, page4];
     intro.delegate = self;
     [intro showInView:self.tabBarController.view];
+    
+    self.isShowingTutorial = YES;
+    self.isTutorialInLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
 }
 
 - (void)setupNoDataView {
@@ -141,10 +145,10 @@
     self.noDataView.center = self.peersTableView.center;
     
     self.noDataImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AppIcon60x60"]];
-    self.noDataImage.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 100) / 2, 88, 100, 100);
+    self.noDataImage.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 100) / 2, ([UIScreen mainScreen].bounds.size.height - 200) / 2 - 108, 100, 100);
     [self.noDataView addSubview:self.noDataImage];
     
-    self.noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 188, [UIScreen mainScreen].bounds.size.width, 100)];
+    self.noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, ([UIScreen mainScreen].bounds.size.height - 200) / 2 - 8, [UIScreen mainScreen].bounds.size.width, 100)];
     self.noDataLabel.text = @"No devices found :(";
     self.noDataLabel.textAlignment = NSTextAlignmentCenter;
     self.noDataLabel.font = [UIFont italicSystemFontOfSize:18
@@ -186,9 +190,15 @@
                 
                 [self startUpManager];
             }
+            
+            [textField resignFirstResponder];
         }];
         
-        [alert showEdit:self.tabBarController title:title subTitle:message closeButtonTitle:@"Cancel" duration:0];
+        [alert addButton:@"Cancel" actionBlock:^{
+            [textField resignFirstResponder];
+        }];
+        
+        [alert showEdit:self.tabBarController title:title subTitle:message closeButtonTitle:nil duration:0];
     }
     
     else {
@@ -206,6 +216,8 @@
                 
                 [self startUpManager];
             }
+            
+            [textField resignFirstResponder];
         }];
     }
 }
@@ -237,9 +249,15 @@
         else {
             [self _shareConcertWithName:text];
         }
+        
+        [textField resignFirstResponder];
     }];
     
-    [alert showEdit:self.tabBarController title:@"Share Concert" subTitle:@"Please enter the concert/artist name." closeButtonTitle:@"Cancel" duration:0];
+    [alert addButton:@"Cancel" actionBlock:^{
+        [textField resignFirstResponder];
+    }];
+    
+    [alert showEdit:self.tabBarController title:@"Share Concert" subTitle:@"Please enter the concert/artist name." closeButtonTitle:nil duration:0];
 }
 
 - (void)_shareConcertWithName:(NSString *)name {
@@ -298,19 +316,31 @@
         chatVC.setupPeerName = self.connectedPeerName;
         chatVC.senderDisplayName = [userDefaults objectForKey:@"nickname"];
         chatVC.senderId = [userDefaults objectForKey:@"uuid"];
+        
+        self.hidesBottomBarWhenPushed = YES;
+        
+        [self performSelector:@selector(setHidesBottomBarWhenPushed:) withObject:@NO afterDelay:0.1];
     }
 }
 
-// MARK UITabBarControllerDelegate
-- (BOOL)tabBarController:(UITabBarController *)theTabBarController shouldSelectViewController:(UIViewController *)viewController {
-    if (self != self.navigationController.visibleViewController) {
-        return NO;
+// MARK: UITabBarControllerDelegate
+- (UIInterfaceOrientationMask)tabBarControllerSupportedInterfaceOrientations:(UITabBarController *)tabBarController {
+    if (self.isShowingTutorial) {
+        if (self.isTutorialInLandscape) {
+            return UIInterfaceOrientationMaskLandscape;
+        }
+        
+        else {
+            return UIInterfaceOrientationMaskPortrait;
+        }
     }
     
-    return YES;
+    else {
+        return UIInterfaceOrientationMaskAll;
+    }
 }
 
-// MARK UITableViewDelegate/UITableViewDataSource
+// MARK: UITableViewDelegate/UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -352,6 +382,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MCPeerID *selectedPeer;
+
     if (self.isSearching) {
         selectedPeer = self.searchResults[indexPath.row];
     }
@@ -493,5 +524,7 @@
     if (![userDefaults objectForKey:@"nickname"]) {
         [self askForNicknameWithError:NO];
     }
+    
+    self.isShowingTutorial = NO;
 }
 @end
