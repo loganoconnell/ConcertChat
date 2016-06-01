@@ -23,6 +23,7 @@
 @import UIKit;
 @import MultipeerConnectivity;
 @import MessageUI;
+@import CoreLocation;
 
 #import <JSQMessagesViewController/JSQMessagesViewController.h>
 #import <JSQMessagesViewController/JSQMessage.h>
@@ -41,6 +42,8 @@
 #import <UITableView-NXEmptyView/UITableView+NXEmptyView.h>
 
 #import <EAIntroView/EAIntroView.h>
+
+#import "DGElasticPullToRefresh/DGElasticPullToRefresh.h"
 
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>

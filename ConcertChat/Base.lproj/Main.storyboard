@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -69,28 +70,40 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="60i-R0-yB8"/>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="T2E-24-jgi"/>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TTA-ha-rX7"/>
-                            <constraint firstAttribute="trailing" secondItem="SrU-M8-0IJ" secondAttribute="trailing" id="Tje-EO-wVd"/>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VI5-4t-n68"/>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Z2z-Aw-kaj"/>
-                            <constraint firstAttribute="trailing" secondItem="SrU-M8-0IJ" secondAttribute="trailing" id="c19-MD-7fo"/>
-                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="h6c-vN-GML"/>
+                            <constraint firstAttribute="trailing" secondItem="SrU-M8-0IJ" secondAttribute="trailing" id="0c5-7k-XHp"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="DgO-ON-mJJ">
+                                <variation key="heightClass=compact" constant="-32"/>
+                            </constraint>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DiJ-43-czM"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-64" id="QkJ-AK-iOs">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="SrU-M8-0IJ" secondAttribute="trailing" id="UhF-O9-zt2"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b5Q-jf-Shn"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bZn-Gc-D5q"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="f7x-cV-scB"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mKc-Ni-SZJ"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="n8w-or-VdQ"/>
+                            <constraint firstAttribute="trailing" secondItem="SrU-M8-0IJ" secondAttribute="trailing" id="t6d-ls-jjI"/>
+                            <constraint firstItem="SrU-M8-0IJ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="xh9-2N-s69"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="SrU-M8-0IJ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="60i-R0-yB8"/>
-                                <exclude reference="T2E-24-jgi"/>
-                                <exclude reference="TTA-ha-rX7"/>
-                                <exclude reference="Tje-EO-wVd"/>
-                                <exclude reference="VI5-4t-n68"/>
-                                <exclude reference="Z2z-Aw-kaj"/>
-                                <exclude reference="c19-MD-7fo"/>
-                                <exclude reference="h6c-vN-GML"/>
+                                <exclude reference="0c5-7k-XHp"/>
+                                <exclude reference="DgO-ON-mJJ"/>
+                                <exclude reference="DiJ-43-czM"/>
+                                <exclude reference="QkJ-AK-iOs"/>
+                                <exclude reference="UhF-O9-zt2"/>
+                                <exclude reference="b5Q-jf-Shn"/>
+                                <exclude reference="bZn-Gc-D5q"/>
+                                <exclude reference="f7x-cV-scB"/>
+                                <exclude reference="mKc-Ni-SZJ"/>
+                                <exclude reference="n8w-or-VdQ"/>
+                                <exclude reference="t6d-ls-jjI"/>
+                                <exclude reference="xh9-2N-s69"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -98,10 +111,18 @@
                                 <include reference="SrU-M8-0IJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="60i-R0-yB8"/>
-                                <include reference="Tje-EO-wVd"/>
-                                <include reference="Z2z-Aw-kaj"/>
-                                <include reference="h6c-vN-GML"/>
+                                <include reference="0c5-7k-XHp"/>
+                                <include reference="DgO-ON-mJJ"/>
+                                <include reference="b5Q-jf-Shn"/>
+                                <include reference="n8w-or-VdQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="DiJ-43-czM"/>
+                                <include reference="bZn-Gc-D5q"/>
+                                <include reference="f7x-cV-scB"/>
+                                <include reference="t6d-ls-jjI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -109,10 +130,10 @@
                                 <include reference="SrU-M8-0IJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="T2E-24-jgi"/>
-                                <include reference="TTA-ha-rX7"/>
-                                <include reference="VI5-4t-n68"/>
-                                <include reference="c19-MD-7fo"/>
+                                <include reference="QkJ-AK-iOs"/>
+                                <include reference="UhF-O9-zt2"/>
+                                <include reference="mKc-Ni-SZJ"/>
+                                <include reference="xh9-2N-s69"/>
                             </mask>
                         </variation>
                     </view>
@@ -132,6 +153,7 @@
                         <outlet property="peersTableView" destination="SrU-M8-0IJ" id="5jt-Rh-cpE"/>
                         <outlet property="searchBar" destination="ilp-f6-NqV" id="aK9-kb-5TJ"/>
                         <outlet property="searchDisplayController" destination="rbf-aC-Qes" id="yYj-9e-10Q"/>
+                        <outlet property="tableViewVerticalLandscapeConstraint" destination="DgO-ON-mJJ" id="Clz-b5-iQU"/>
                         <segue destination="Wgp-O4-UDG" kind="show" identifier="idChatSegue" id="aWL-rY-SzX"/>
                     </connections>
                 </viewController>
@@ -146,7 +168,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2146" y="349"/>
+            <point key="canvasLocation" x="2145" y="348"/>
         </scene>
         <!--Chat-->
         <scene sceneID="lTp-lg-PGN">

@@ -16,6 +16,8 @@
 @property (nonatomic, weak) IBOutlet UITableView *peersTableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewVerticalLandscapeConstraint;
+
 @property (nonatomic, strong) UIView *noDataView;
 @property (nonatomic, strong) UIImageView *noDataImage;
 @property (nonatomic, strong) UILabel *noDataLabel;
@@ -28,6 +30,7 @@
 
 @property (nonatomic) BOOL isAdvertising;
 @property (nonatomic) BOOL isSearching;
+@property (nonatomic) BOOL isSearchInLandscape;
 @property (nonatomic) BOOL isShowingTutorial;
 @property (nonatomic) BOOL isTutorialInLandscape;
 

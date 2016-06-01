@@ -30,6 +30,21 @@
     
     self.peersTableView.nxEV_emptyView = self.noDataView;
     self.peersTableView.tableFooterView = [UIView new];
+
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    
+    DGElasticPullToRefreshLoadingViewCircle* loadingView = [[DGElasticPullToRefreshLoadingViewCircle alloc] init];
+    loadingView.tintColor = self.peersTableView.backgroundColor;
+    
+    [self.peersTableView dg_addPullToRefreshWithWaveMaxHeight:70 minOffsetToPull:80 loadingContentInset:50 loadingViewSize:30 actionHandler:^{
+        [self startUpManager];
+        
+        [self.peersTableView dg_stopLoading];
+    } loadingView:loadingView];
+    
+    [self.peersTableView dg_setPullToRefreshFillColor:UIColorFromRGB(0x212121)];
+    
+    [self.peersTableView dg_setPullToRefreshBackgroundColor:self.peersTableView.backgroundColor];
     
     if (![userDefaults objectForKey:@"nickname"]) {
         [self showTutorialView];
@@ -351,6 +366,16 @@
             return UIInterfaceOrientationMaskPortrait;
         }
     }
+
+    else if (self.isSearching) {
+        if (self.isSearchInLandscape) {
+            return UIInterfaceOrientationMaskLandscape;
+        }
+        
+        else {
+            return UIInterfaceOrientationMaskPortrait;
+        }
+    }
     
     else {
         return UIInterfaceOrientationMaskAll;
@@ -503,7 +528,13 @@
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     self.isSearching = YES;
     
+    self.isSearchInLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
+    if (self.isSearchInLandscape) {
+        self.tableViewVerticalLandscapeConstraint.constant = 0;
+    }
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
@@ -511,6 +542,8 @@
         self.isSearching = NO;
         
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        
+        self.tableViewVerticalLandscapeConstraint.constant = -32;
     }
 }
 
@@ -518,6 +551,8 @@
     self.isSearching = NO;
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    self.tableViewVerticalLandscapeConstraint.constant = -32;
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {

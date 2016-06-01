@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4EDA1311C26735EA43199690 /* libPods-ConcertChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */; };
 		6724A2431CF76FE30051D837 /* TweetsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6724A2421CF76FE30051D837 /* TweetsNavigationController.m */; };
+		673D8DC01CFF472D004E5880 /* DGElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 673D8DB71CFF472D004E5880 /* DGElasticPullToRefresh.m */; };
+		673D8DC11CFF472D004E5880 /* DGElasticPullToRefreshExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 673D8DB91CFF472D004E5880 /* DGElasticPullToRefreshExtension.m */; };
+		673D8DC21CFF472D004E5880 /* DGElasticPullToRefreshLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 673D8DBB1CFF472D004E5880 /* DGElasticPullToRefreshLoadingView.m */; };
+		673D8DC31CFF472D004E5880 /* DGElasticPullToRefreshLoadingViewCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 673D8DBD1CFF472D004E5880 /* DGElasticPullToRefreshLoadingViewCircle.m */; };
+		673D8DC41CFF472D004E5880 /* DGElasticPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 673D8DBF1CFF472D004E5880 /* DGElasticPullToRefreshView.m */; };
 		67424EAF1CB4725C00E73249 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67424EAE1CB4725C00E73249 /* ChatViewController.m */; };
 		677B979E1CEDFD36003ABC10 /* Concert1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B979A1CEDFD36003ABC10 /* Concert1.jpg */; };
 		677B979F1CEDFD36003ABC10 /* Concert2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B979B1CEDFD36003ABC10 /* Concert2.jpg */; };
@@ -47,6 +52,16 @@
 		2D7CD6EE3AA5DF40A0BE9AFA /* libPods-ConcertChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConcertChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6724A2411CF76FE30051D837 /* TweetsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsNavigationController.h; sourceTree = "<group>"; };
 		6724A2421CF76FE30051D837 /* TweetsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsNavigationController.m; sourceTree = "<group>"; };
+		673D8DB61CFF472D004E5880 /* DGElasticPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGElasticPullToRefresh.h; sourceTree = "<group>"; };
+		673D8DB71CFF472D004E5880 /* DGElasticPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGElasticPullToRefresh.m; sourceTree = "<group>"; };
+		673D8DB81CFF472D004E5880 /* DGElasticPullToRefreshExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGElasticPullToRefreshExtension.h; sourceTree = "<group>"; };
+		673D8DB91CFF472D004E5880 /* DGElasticPullToRefreshExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGElasticPullToRefreshExtension.m; sourceTree = "<group>"; };
+		673D8DBA1CFF472D004E5880 /* DGElasticPullToRefreshLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGElasticPullToRefreshLoadingView.h; sourceTree = "<group>"; };
+		673D8DBB1CFF472D004E5880 /* DGElasticPullToRefreshLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGElasticPullToRefreshLoadingView.m; sourceTree = "<group>"; };
+		673D8DBC1CFF472D004E5880 /* DGElasticPullToRefreshLoadingViewCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGElasticPullToRefreshLoadingViewCircle.h; sourceTree = "<group>"; };
+		673D8DBD1CFF472D004E5880 /* DGElasticPullToRefreshLoadingViewCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGElasticPullToRefreshLoadingViewCircle.m; sourceTree = "<group>"; };
+		673D8DBE1CFF472D004E5880 /* DGElasticPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGElasticPullToRefreshView.h; sourceTree = "<group>"; };
+		673D8DBF1CFF472D004E5880 /* DGElasticPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGElasticPullToRefreshView.m; sourceTree = "<group>"; };
 		67424EAD1CB4725C00E73249 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		67424EAE1CB4725C00E73249 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		677B979A1CEDFD36003ABC10 /* Concert1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Concert1.jpg; sourceTree = "<group>"; };
@@ -105,6 +120,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		673D8DB51CFF472D004E5880 /* DGElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				673D8DB61CFF472D004E5880 /* DGElasticPullToRefresh.h */,
+				673D8DB71CFF472D004E5880 /* DGElasticPullToRefresh.m */,
+				673D8DB81CFF472D004E5880 /* DGElasticPullToRefreshExtension.h */,
+				673D8DB91CFF472D004E5880 /* DGElasticPullToRefreshExtension.m */,
+				673D8DBA1CFF472D004E5880 /* DGElasticPullToRefreshLoadingView.h */,
+				673D8DBB1CFF472D004E5880 /* DGElasticPullToRefreshLoadingView.m */,
+				673D8DBC1CFF472D004E5880 /* DGElasticPullToRefreshLoadingViewCircle.h */,
+				673D8DBD1CFF472D004E5880 /* DGElasticPullToRefreshLoadingViewCircle.m */,
+				673D8DBE1CFF472D004E5880 /* DGElasticPullToRefreshView.h */,
+				673D8DBF1CFF472D004E5880 /* DGElasticPullToRefreshView.m */,
+			);
+			path = DGElasticPullToRefresh;
+			sourceTree = "<group>";
+		};
 		677B97991CEDFD36003ABC10 /* Background Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +188,7 @@
 				677E6EEA1CB3153A00DCA2FB /* MPCManager.m */,
 				677E6EBF1CB3140500DCA2FB /* Main.storyboard */,
 				677E6EC41CB3140500DCA2FB /* LaunchScreen.storyboard */,
+				673D8DB51CFF472D004E5880 /* DGElasticPullToRefresh */,
 				677B97991CEDFD36003ABC10 /* Background Images */,
 				677E6EC21CB3140500DCA2FB /* Assets.xcassets */,
 				677E6EC71CB3140500DCA2FB /* Info.plist */,
@@ -415,12 +448,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673D8DC31CFF472D004E5880 /* DGElasticPullToRefreshLoadingViewCircle.m in Sources */,
+				673D8DC41CFF472D004E5880 /* DGElasticPullToRefreshView.m in Sources */,
 				677E6EBE1CB3140500DCA2FB /* ViewController.m in Sources */,
 				677E6EBB1CB3140500DCA2FB /* AppDelegate.m in Sources */,
+				673D8DC01CFF472D004E5880 /* DGElasticPullToRefresh.m in Sources */,
 				67424EAF1CB4725C00E73249 /* ChatViewController.m in Sources */,
 				679F4CC11CB54BCD00DC41ED /* SettingsViewController.m in Sources */,
+				673D8DC11CFF472D004E5880 /* DGElasticPullToRefreshExtension.m in Sources */,
 				677E6EEB1CB3153A00DCA2FB /* MPCManager.m in Sources */,
 				677E6EB81CB3140500DCA2FB /* main.m in Sources */,
+				673D8DC21CFF472D004E5880 /* DGElasticPullToRefreshLoadingView.m in Sources */,
 				6724A2431CF76FE30051D837 /* TweetsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

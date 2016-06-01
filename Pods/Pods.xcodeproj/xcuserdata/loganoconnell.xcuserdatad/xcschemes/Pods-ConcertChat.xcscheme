@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4ACF2C6B0A26D2A84C7A85B9'
+               BlueprintIdentifier = 'A7BDBEA429C31778080BC370'
                BlueprintName = 'Pods-ConcertChat'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ConcertChat.a'>

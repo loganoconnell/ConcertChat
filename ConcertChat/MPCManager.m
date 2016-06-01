@@ -114,9 +114,11 @@
         }
     }
     
-    [self.foundPeers addObject:peerID];
-    
-    [self.delegate foundPeer];
+    if (![peerID.displayName isEqualToString:self.peer.displayName]) {
+        [self.foundPeers addObject:peerID];
+        
+        [self.delegate foundPeer];
+    }
 }
 
 - (void)browser:(MCNearbyServiceBrowser *)browser lostPeer:(MCPeerID *)peerID {

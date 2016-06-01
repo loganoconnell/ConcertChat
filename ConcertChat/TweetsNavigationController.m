@@ -20,6 +20,13 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [self.locationManager startUpdatingLocation];
+    
+    [self.locationManager requestWhenInUseAuthorization];
+    
     if (!self.hasSearch) {
         [self promptForSearch];
     }
@@ -72,9 +79,10 @@
 - (void)showTimelineWithTextToSearch:(NSString *)text {
     TWTRAPIClient *client = [[TWTRAPIClient alloc] init];
     TWTRSearchTimelineDataSource *datasource = [[TWTRSearchTimelineDataSource alloc] initWithSearchQuery:[NSString stringWithFormat:@"%@", text] APIClient:client];
+    datasource.geocodeSpecifier = [NSString stringWithFormat:@"%f,%f,100mi", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude];
     
     TWTRTimelineViewController *controller = [[TWTRTimelineViewController alloc] initWithDataSource:datasource];
-    controller.title = [NSString stringWithFormat:@"Search %@", text];
+    controller.title = [NSString stringWithFormat:@"Search \"%@\"", text];
     controller.view.backgroundColor = [UIColor whiteColor];
     controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(promptForSearch)];
     

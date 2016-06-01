@@ -9,5 +9,7 @@
 #import "ConcertChat.h"
 
 @interface TweetsNavigationController : UINavigationController
+@property (nonatomic, strong) CLLocationManager *locationManager;
+
 @property (nonatomic) BOOL hasSearch;
 @end
