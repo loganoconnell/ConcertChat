@@ -15,6 +15,8 @@
     UIViewController *placeholderController = [UIViewController new];
     placeholderController.view.backgroundColor = [UIColor whiteColor];
     self.viewControllers = @[placeholderController];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -30,6 +32,10 @@
     if (!self.hasSearch) {
         [self promptForSearch];
     }
+}
+
+- (void)didRotate:(NSNotification *)notification {
+    [(ViewController *)((UINavigationController *)self.tabBarController.viewControllers.firstObject).viewControllers.firstObject willAnimateRotationToInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation] duration:0];
 }
 
 - (void)promptForSearch {

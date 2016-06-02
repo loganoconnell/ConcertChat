@@ -8,6 +8,8 @@
 
 #import "ConcertChat.h"
 
+#import "ViewController.h"
+
 @interface TweetsNavigationController : UINavigationController
 @property (nonatomic, strong) CLLocationManager *locationManager;
 

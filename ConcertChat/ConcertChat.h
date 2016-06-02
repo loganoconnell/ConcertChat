@@ -25,6 +25,8 @@
 @import MessageUI;
 @import CoreLocation;
 
+#import "DGElasticPullToRefresh/DGElasticPullToRefresh.h"
+
 #import <JSQMessagesViewController/JSQMessagesViewController.h>
 #import <JSQMessagesViewController/JSQMessage.h>
 #import <JSQMessagesViewController/JSQMessagesBubbleImageFactory.h>
@@ -42,8 +44,6 @@
 #import <UITableView-NXEmptyView/UITableView+NXEmptyView.h>
 
 #import <EAIntroView/EAIntroView.h>
-
-#import "DGElasticPullToRefresh/DGElasticPullToRefresh.h"
 
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
