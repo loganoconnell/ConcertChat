@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BFPaperTableViewCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EAIntroView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIColor+BFPaperColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UITableView-NXEmptyView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,6 +62,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>006BAFE3949FE86F2821A755337C2477</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C61EE7664D4543B495570071FE0F0DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2EFEDBB649146422B0A076290AB959DE</key>
 		<dict>
 			<key>primary</key>
@@ -62,12 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E4909E3EB2E178A1C30E15D221550BF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5C8A460497CE5874AE606C470DA6804B</key>
+		<key>510FEA0B6E5372B57D692ADD3CD04F8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +92,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93E5E6652678330A2FAC7D7476E2279A</key>
+		<key>88585C5FF681F6ABECB2CA09077D2F02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C588CD6557048D1908DBC44D8F765834</key>
+		<key>AA8B567933CA47B8D7C065AECA481215</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -93,6 +108,11 @@
 			<true/>
 		</dict>
 		<key>D607CE439EBD256738A38E8D3933E56F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9BA0C2DB79918E4E6DDCBFC5CCEBF79</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -45,6 +45,8 @@
 
 #import <EAIntroView/EAIntroView.h>
 
+#import <BFPaperTableViewCell/BFPaperTableViewCell.h>
+
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import <TwitterKit/TwitterKit.h>

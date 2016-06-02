@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '12360E20BAA3B2D736804B84'
-               BlueprintName = 'EAIntroView'
+               BlueprintIdentifier = 'FE70F4A90A3A8D4E5D0225F0'
+               BlueprintName = 'BFPaperTableViewCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libEAIntroView.a'>
+               BuildableName = 'libBFPaperTableViewCell.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

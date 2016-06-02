@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '12360E20BAA3B2D736804B84'
-               BlueprintName = 'EAIntroView'
+               BlueprintIdentifier = '212C6AF8A8E38C14A37B1EE7'
+               BlueprintName = 'UIColor+BFPaperColors'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libEAIntroView.a'>
+               BuildableName = 'libUIColor+BFPaperColors.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

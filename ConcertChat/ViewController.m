@@ -181,10 +181,15 @@
     [self.noDataView addSubview:self.noDataImage];
     
     self.noDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, ([UIScreen mainScreen].bounds.size.height - 200) / 2 - 8, [UIScreen mainScreen].bounds.size.width, 100)];
-    self.noDataLabel.text = @"No devices found :(";
-    self.noDataLabel.textAlignment = NSTextAlignmentCenter;
     self.noDataLabel.font = [UIFont italicSystemFontOfSize:18
                              ];
+    
+    NSMutableAttributedString *textForNoDataLabel = [[NSMutableAttributedString alloc] initWithString:@"No devices found.\n(Make sure you have Bluetooth\nor Wifi enabled!)"];
+    [textForNoDataLabel setAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:18]} range:NSMakeRange(0, 16)];
+    self.noDataLabel.attributedText = textForNoDataLabel;
+    
+    self.noDataLabel.numberOfLines = 3;
+    self.noDataLabel.textAlignment = NSTextAlignmentCenter;
     self.noDataLabel.textColor = UIColorFromRGB(0xB6B6B6);
     [self.noDataView addSubview:self.noDataLabel];
 }
@@ -396,10 +401,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:@"idPeerCell"];
+    BFPaperTableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:@"idPeerCell"];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"idPeerCell"];
+        cell = [[BFPaperTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"idPeerCell"];
     }
     
     NSString *text;
@@ -414,6 +419,11 @@
     cell.textLabel.text = [text componentsSeparatedByString:@":"][0];
     cell.detailTextLabel.text = [text componentsSeparatedByString:@":"][1];
     cell.imageView.image = [UIImage imageNamed:@"Phone"];
+    
+    cell.tapCircleDiameter = bfPaperTableViewCell_tapCircleDiameterFull;
+    cell.usesSmartColor = NO;
+    cell.tapCircleColor = UIColorFromRGB(0xB6B6B6);
+    cell.tapDelay = 0;
     
     return cell;
 }
