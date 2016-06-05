@@ -12,7 +12,7 @@
 #import "ChatViewController.h"
 #import "MPCManager.h"
 
-@interface ViewController : UIViewController <UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MPCManagerDelegate, EAIntroDelegate>
+@interface ViewController : UIViewController <UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MPCManagerDelegate, EAIntroDelegate, CMPopTipViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *peersTableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 

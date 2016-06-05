@@ -45,6 +45,8 @@
 
 #import <EAIntroView/EAIntroView.h>
 
+#import <CMPopTipView/CMPopTipView.h>
+
 #import <BFPaperTableViewCell/BFPaperTableViewCell.h>
 
 #import <Fabric/Fabric.h>

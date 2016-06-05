@@ -148,7 +148,7 @@
     page4.title = @"That's it!";
     page4.titlePositionY = titleY;
     page4.titleFont = [UIFont boldSystemFontOfSize:20];
-    page4.desc = @"Now go get partying!";
+    page4.desc = @"Now let's learn how to use the app!";
     page4.descPositionY = descY;
     page4.descFont = [UIFont systemFontOfSize:15];
     page4.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
@@ -170,6 +170,58 @@
     [intro showInView:self.tabBarController.view];
     
     self.isShowingTutorial = YES;
+
+    [self.tabBarController setSelectedViewController:[self.tabBarController.viewControllers objectAtIndex:0]];
+}
+
+- (void)showPopTipNumber:(int)number {
+    CMPopTipView *popTip = [[CMPopTipView alloc] init];
+    popTip.delegate = self;
+    popTip.backgroundColor = UIColorFromRGB(0x212121);
+    popTip.hasGradientBackground = NO;
+    popTip.has3DStyle = NO;
+    popTip.dismissTapAnywhere = YES;
+    popTip.tag = number;
+    
+    switch (number) {
+        case 1:
+            popTip.message = @"Share concert information to social networks\n(Tap to continue tutorial)";
+            [popTip presentPointingAtBarButtonItem:self.navigationItem.leftBarButtonItem animated:YES];
+            
+            break;
+            
+        case 2:
+            popTip.message = @"Turn on and off visibility of your device to others";
+            [popTip presentPointingAtBarButtonItem:self.navigationItem.rightBarButtonItem animated:YES];
+            
+            break;
+            
+        case 3:
+            popTip.message = @"Here is where devices nearby will show up";
+            [popTip presentPointingAtView:self.noDataLabel inView:self.view animated:YES];
+            
+            break;
+            
+        case 4:
+            popTip.message = @"Search through found devices by name";
+            [popTip presentPointingAtView:self.searchBar inView:self.view animated:YES];
+            
+            break;
+            
+        case 5:
+            popTip.message = @"Here are the three tabs, the first lists visible devices, the second shows you neaby tweets around you about a concert, and the third lets you configure settings";
+            [popTip presentPointingAtView:self.tabBarController.tabBar inView:self.view animated:YES];
+            
+            break;
+            
+        case 6:
+            [self presentAlertWithMessage:@"Go get partying!"];
+            
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)setupNoDataView {
@@ -588,5 +640,12 @@
     }
     
     self.isShowingTutorial = NO;
+    
+    [self showPopTipNumber:1];
+}
+
+// MARK: CMPopTipViewDelegate
+- (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
+    [self showPopTipNumber:(int)popTipView.tag + 1];
 }
 @end

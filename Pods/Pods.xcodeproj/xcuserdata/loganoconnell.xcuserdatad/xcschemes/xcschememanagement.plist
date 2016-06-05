@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CMPopTipView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EAIntroView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,6 +44,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ConcertChatTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ConcertChatUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SCLAlertView-Objective-C.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +77,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>006BAFE3949FE86F2821A755337C2477</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0C61EE7664D4543B495570071FE0F0DE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2EFEDBB649146422B0A076290AB959DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3CA960724B1373D69EA93F6C1B3C82FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40AE44687762AB397C23F932A98B2F5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,17 +102,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6781D5A6D89F99A19AAAA4F1655EE810</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7EDBC06B3D447B9192D12E139BD4ACFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88585C5FF681F6ABECB2CA09077D2F02</key>
+		<key>85F8C023826B3707CF2BF5E70ADDBE5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96C07495C1C1212812CF9C35178D24A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>AA8B567933CA47B8D7C065AECA481215</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD7B5AAFB6BD402905E66B5A2BABF8B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D9BA0C2DB79918E4E6DDCBFC5CCEBF79</key>
+		<key>E8067462339501785C6C0CDEDCE9C239</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,6 +1,7 @@
 PODS:
   - BFPaperTableViewCell (2.3.4):
     - UIColor+BFPaperColors
+  - CMPopTipView (2.3.0)
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
   - EAIntroView (2.8.3):
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - BFPaperTableViewCell
+  - CMPopTipView
   - Crashlytics
   - EAIntroView (~> 2.8.0)
   - Fabric
@@ -35,6 +37,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   BFPaperTableViewCell: cbd20bcae648f3daf766e4e7632eed5d2041287d
+  CMPopTipView: 774e0230b5c73abb3c39051da6d8a383373c4f7f
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   EAIntroView: e948c83e642f30010d427e643c18a6f2b529afed
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
@@ -49,4 +52,6 @@ SPEC CHECKSUMS:
   UIColor+BFPaperColors: 03101fe6c10ed00c6daae7c26553f1de41500853
   UITableView-NXEmptyView: 0bc404cfd9c201af518a63240ac4ac4dad2c69c2
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: d166451f6a8078bfacb82057eb6652d202b257e5
+
+COCOAPODS: 1.0.1

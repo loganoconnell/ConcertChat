@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FE70F4A90A3A8D4E5D0225F0'
+               BlueprintIdentifier = '510FEA0B6E5372B57D692ADD3CD04F8C'
                BlueprintName = 'BFPaperTableViewCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libBFPaperTableViewCell.a'>
