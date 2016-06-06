@@ -10,6 +10,7 @@
 		0AD6D1E78E37978CD4B6C1C7 /* libPods-ConcertChatUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E2C583AB087DB5D498405D /* libPods-ConcertChatUITests.a */; };
 		271630CC07A99656B732490F /* libPods-ConcertChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E3D08E082757B53A83DBD9 /* libPods-ConcertChatTests.a */; };
 		58D95AC34BF869FCD3B0F65F /* libPods-ConcertChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 812A42345FBBB4E1DEEFE529 /* libPods-ConcertChat.a */; };
+		670E2F841D05BAFC00FD28EE /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 670E2F831D05BAFC00FD28EE /* UIImageEffects.m */; };
 		6724A2431CF76FE30051D837 /* TweetsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6724A2421CF76FE30051D837 /* TweetsNavigationController.m */; };
 		673D8DC01CFF472D004E5880 /* DGElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 673D8DB71CFF472D004E5880 /* DGElasticPullToRefresh.m */; };
 		673D8DC11CFF472D004E5880 /* DGElasticPullToRefreshExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 673D8DB91CFF472D004E5880 /* DGElasticPullToRefreshExtension.m */; };
@@ -54,6 +55,8 @@
 		10782E0C84309DAE4281C450 /* Pods-ConcertChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcertChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConcertChatUITests/Pods-ConcertChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3505FDA6B57C2A6EB920DC52 /* Pods-ConcertChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcertChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConcertChat/Pods-ConcertChat.debug.xcconfig"; sourceTree = "<group>"; };
 		3B53B9456CC8033BABA72971 /* Pods-ConcertChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConcertChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConcertChatTests/Pods-ConcertChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		670E2F821D05BAFC00FD28EE /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
+		670E2F831D05BAFC00FD28EE /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		6724A2411CF76FE30051D837 /* TweetsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsNavigationController.h; sourceTree = "<group>"; };
 		6724A2421CF76FE30051D837 /* TweetsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsNavigationController.m; sourceTree = "<group>"; };
 		673D8DB61CFF472D004E5880 /* DGElasticPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGElasticPullToRefresh.h; sourceTree = "<group>"; };
@@ -143,6 +146,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		670E2F811D05BAFC00FD28EE /* UIImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				670E2F821D05BAFC00FD28EE /* UIImageEffects.h */,
+				670E2F831D05BAFC00FD28EE /* UIImageEffects.m */,
+			);
+			path = UIImageEffects;
+			sourceTree = "<group>";
+		};
 		673D8DB51CFF472D004E5880 /* DGElasticPullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +223,7 @@
 				677E6EEA1CB3153A00DCA2FB /* MPCManager.m */,
 				677E6EBF1CB3140500DCA2FB /* Main.storyboard */,
 				677E6EC41CB3140500DCA2FB /* LaunchScreen.storyboard */,
+				670E2F811D05BAFC00FD28EE /* UIImageEffects */,
 				673D8DB51CFF472D004E5880 /* DGElasticPullToRefresh */,
 				677B97991CEDFD36003ABC10 /* Background Images */,
 				677E6EC21CB3140500DCA2FB /* Assets.xcassets */,
@@ -553,6 +566,7 @@
 				679F4CC11CB54BCD00DC41ED /* SettingsViewController.m in Sources */,
 				673D8DC11CFF472D004E5880 /* DGElasticPullToRefreshExtension.m in Sources */,
 				677E6EEB1CB3153A00DCA2FB /* MPCManager.m in Sources */,
+				670E2F841D05BAFC00FD28EE /* UIImageEffects.m in Sources */,
 				677E6EB81CB3140500DCA2FB /* main.m in Sources */,
 				673D8DC21CFF472D004E5880 /* DGElasticPullToRefreshLoadingView.m in Sources */,
 				6724A2431CF76FE30051D837 /* TweetsNavigationController.m in Sources */,

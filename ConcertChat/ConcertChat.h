@@ -25,6 +25,8 @@
 @import MessageUI;
 @import CoreLocation;
 
+#import "UIImageEffects/UIImageEffects.h"
+
 #import "DGElasticPullToRefresh/DGElasticPullToRefresh.h"
 
 #import <JSQMessagesViewController/JSQMessagesViewController.h>

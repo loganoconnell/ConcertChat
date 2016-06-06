@@ -112,7 +112,7 @@
     alteredFrame1.size.height = 50;
     page1.titleIconView.frame = alteredFrame1;
     page1.titleIconPositionY = titleIconY;
-    page1.bgImage = [UIImage imageNamed:@"Concert1.jpg"];
+    page1.bgImage = [UIImageEffects imageByApplyingBlurToImage:[UIImage imageNamed:@"Concert1.jpg"] withRadius:5 tintColor:nil saturationDeltaFactor:1 maskImage:nil];
     
     EAIntroPage *page2 = [EAIntroPage page];
     page2.title = @"How to Start";
@@ -127,7 +127,7 @@
     alteredFrame2.size.height = 50;
     page2.titleIconView.frame = alteredFrame2;
     page2.titleIconPositionY = titleIconY;
-    page2.bgImage = [UIImage imageNamed:@"Concert2.jpg"];
+    page2.bgImage = [UIImageEffects imageByApplyingBlurToImage:[UIImage imageNamed:@"Concert2.jpg"] withRadius:5 tintColor:nil saturationDeltaFactor:1 maskImage:nil];
     
     EAIntroPage *page3 = [EAIntroPage page];
     page3.title = @"How to Chat";
@@ -142,7 +142,7 @@
     alteredFrame3.size.height = 50;
     page3.titleIconView.frame = alteredFrame3;
     page3.titleIconPositionY = titleIconY;
-    page3.bgImage = [UIImage imageNamed:@"Concert3.jpg"];
+    page3.bgImage = [UIImageEffects imageByApplyingBlurToImage:[UIImage imageNamed:@"Concert3.jpg"] withRadius:5 tintColor:nil saturationDeltaFactor:1 maskImage:nil];
     
     EAIntroPage *page4 = [EAIntroPage page];
     page4.title = @"That's it!";
@@ -157,7 +157,7 @@
     alteredFrame4.size.height = 50;
     page4.titleIconView.frame = alteredFrame4;
     page4.titleIconPositionY = titleIconY;
-    page4.bgImage = [UIImage imageNamed:@"Concert4.jpg"];
+    page4.bgImage = [UIImageEffects imageByApplyingBlurToImage:[UIImage imageNamed:@"Concert4.jpg"] withRadius:5 tintColor:nil saturationDeltaFactor:1 maskImage:nil];
     page4.onPageDidAppear = ^{
         intro.skipButton.hidden = YES;
     };
@@ -180,6 +180,7 @@
     popTip.backgroundColor = UIColorFromRGB(0x212121);
     popTip.hasGradientBackground = NO;
     popTip.has3DStyle = NO;
+    popTip.hasShadow = NO;
     popTip.dismissTapAnywhere = YES;
     popTip.tag = number;
     
@@ -197,7 +198,7 @@
             break;
             
         case 3:
-            popTip.message = @"Here is where devices nearby will show up";
+            popTip.message = @"Nearby devices will be listed here";
             [popTip presentPointingAtView:self.noDataLabel inView:self.view animated:YES];
             
             break;
@@ -209,7 +210,7 @@
             break;
             
         case 5:
-            popTip.message = @"Here are the three tabs, the first lists visible devices, the second shows you neaby tweets around you about a concert, and the third lets you configure settings";
+            popTip.message = @"Here are the three tabs, the first lists visible devices, the second shows nearby tweets about a concert, and the third lets you configure settings";
             [popTip presentPointingAtView:self.tabBarController.tabBar inView:self.view animated:YES];
             
             break;
@@ -222,6 +223,10 @@
         default:
             break;
     }
+    
+    [UIView animateWithDuration:1 delay:0 options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionAllowUserInteraction) animations:^{
+        popTip.transform = CGAffineTransformMakeTranslation(0, popTip.getPointDirection == PointDirectionUp ? 10 : -10);
+    } completion:nil];
 }
 
 - (void)setupNoDataView {
@@ -364,7 +369,7 @@
     
     alert.statusBarHidden = YES;
     
-    [alert showInfo:self.tabBarController title:@"" subTitle:message closeButtonTitle:@"OK" duration:0];
+    [alert showInfo:self.tabBarController title:message subTitle:@"" closeButtonTitle:@"OK" duration:0];
 }
 
 - (void)startUpManager {
