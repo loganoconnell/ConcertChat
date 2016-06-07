@@ -33,7 +33,7 @@
 
     self.extendedLayoutIncludesOpaqueBars = YES;
     
-    DGElasticPullToRefreshLoadingViewCircle* loadingView = [[DGElasticPullToRefreshLoadingViewCircle alloc] init];
+    DGElasticPullToRefreshLoadingViewCircle *loadingView = [[DGElasticPullToRefreshLoadingViewCircle alloc] init];
     loadingView.tintColor = self.peersTableView.backgroundColor;
     
     [self.peersTableView dg_addPullToRefreshWithWaveMaxHeight:70 minOffsetToPull:80 loadingContentInset:50 loadingViewSize:30 actionHandler:^{
@@ -78,6 +78,7 @@
 
 - (void)showTutorialView {
     EAIntroView *intro = [[EAIntroView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    intro.tapToNext = YES;
     
     self.isTutorialInLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
     
@@ -103,7 +104,7 @@
     page1.title = @"Welcome to ConcertChat";
     page1.titlePositionY = titleY;
     page1.titleFont = [UIFont boldSystemFontOfSize:20];
-    page1.desc = @"Are you ready to party? Let's teach you how to get started!";
+    page1.desc = @"Are you ready to party? Let's teach you how to get started!\n(Tap or swipe to continue tutorial)";
     page1.descPositionY = descY;
     page1.descFont = [UIFont systemFontOfSize:15];
     page1.titleIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ConcertChat"]];
@@ -176,13 +177,15 @@
 
 - (void)showPopTipNumber:(int)number {
     CMPopTipView *popTip = [[CMPopTipView alloc] init];
+    popTip.tag = number;
     popTip.delegate = self;
     popTip.backgroundColor = UIColorFromRGB(0x212121);
     popTip.hasGradientBackground = NO;
     popTip.has3DStyle = NO;
     popTip.hasShadow = NO;
     popTip.dismissTapAnywhere = YES;
-    popTip.tag = number;
+    
+    SCLAlertView *alert;
     
     switch (number) {
         case 1:
@@ -216,7 +219,13 @@
             break;
             
         case 6:
-            [self presentAlertWithMessage:@"Go get partying!"];
+            alert = [[SCLAlertView alloc] initWithNewWindow];
+            
+            alert.customViewColor = UIColorFromRGB(0xF44336);
+            
+            alert.statusBarHidden = YES;
+            
+            [alert showInfo:self.tabBarController title:@"Go get partying!" subTitle:@"" closeButtonTitle:nil duration:1];
             
             break;
             
@@ -370,6 +379,8 @@
     alert.statusBarHidden = YES;
     
     [alert showInfo:self.tabBarController title:message subTitle:@"" closeButtonTitle:@"OK" duration:0];
+    
+    alert.labelTitle.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)startUpManager {
@@ -598,10 +609,6 @@
     self.isSearchInLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-    
-    if (self.isSearchInLandscape) {
-        self.tableViewVerticalLandscapeConstraint.constant = 0;
-    }
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
@@ -609,8 +616,6 @@
         self.isSearching = NO;
         
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        
-        self.tableViewVerticalLandscapeConstraint.constant = -32;
     }
 }
 
@@ -618,8 +623,6 @@
     self.isSearching = NO;
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
-    self.tableViewVerticalLandscapeConstraint.constant = -32;
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {

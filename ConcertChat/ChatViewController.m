@@ -214,15 +214,13 @@
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    NSString *message = @"Saved!";
-    
     SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
     
     alert.customViewColor = UIColorFromRGB(0xF44336);
     
     alert.statusBarHidden = YES;
     
-    [alert showInfo:self.tabBarController title:@"" subTitle:message closeButtonTitle:nil duration:1];
+    [alert showInfo:self.tabBarController title:@"Saved!" subTitle:@"" closeButtonTitle:nil duration:1];
 }
 
 // MARK: JSQMessagesCollectionViewCellDelegate

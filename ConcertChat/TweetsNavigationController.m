@@ -30,7 +30,15 @@
     [self.locationManager requestWhenInUseAuthorization];
     
     if (!self.hasSearch) {
-        [self promptForSearch];
+        if ([userDefaults objectForKey:@"lastTwitterSearch"]) {
+            self.hasSearch = YES;
+            
+            [self showTimelineWithTextToSearch:[userDefaults objectForKey:@"lastTwitterSearch"]];
+        }
+        
+        else {
+            [self promptForSearch];
+        }
     }
 }
 
@@ -59,6 +67,8 @@
         NSString *text = textField.text;
         
         if (text.length > 0) {
+            [userDefaults setObject:text forKey:@"lastTwitterSearch"];
+            
             [self showTimelineWithTextToSearch:text];
             
             [textField resignFirstResponder];
