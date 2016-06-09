@@ -94,6 +94,7 @@
                         <outlet property="peersTableView" destination="SrU-M8-0IJ" id="5jt-Rh-cpE"/>
                         <outlet property="searchBar" destination="ilp-f6-NqV" id="aK9-kb-5TJ"/>
                         <outlet property="searchDisplayController" destination="rbf-aC-Qes" id="yYj-9e-10Q"/>
+                        <outlet property="tableViewTopContraint" destination="Nkw-Uj-hYo" id="xPg-vZ-v9b"/>
                         <segue destination="Wgp-O4-UDG" kind="show" identifier="idChatSegue" id="aWL-rY-SzX"/>
                     </connections>
                 </viewController>
@@ -108,7 +109,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2145" y="348"/>
+            <point key="canvasLocation" x="2146" y="264"/>
         </scene>
         <!--Chat-->
         <scene sceneID="lTp-lg-PGN">
@@ -166,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyt-TP-gyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241.5" y="349.5"/>
+            <point key="canvasLocation" x="3249" y="264"/>
         </scene>
         <!--Tweets-->
         <scene sceneID="5Zd-FU-nUq">

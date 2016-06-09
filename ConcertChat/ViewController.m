@@ -609,6 +609,14 @@
     self.isSearchInLandscape = UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]);
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
+    if (self.isSearchInLandscape) {
+        self.tableViewTopContraint.constant = -0;
+    }
+    
+    else {
+        self.tableViewTopContraint.constant = -20;
+    }
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
@@ -617,12 +625,28 @@
         
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     }
+    
+    if (self.isSearchInLandscape) {
+        self.tableViewTopContraint.constant = -32;
+    }
+    
+    else {
+        self.tableViewTopContraint.constant = -64;
+    }
 }
 
 -  (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     self.isSearching = NO;
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    if (self.isSearchInLandscape) {
+        self.tableViewTopContraint.constant = -32;
+    }
+    
+    else {
+        self.tableViewTopContraint.constant = -64;
+    }
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {

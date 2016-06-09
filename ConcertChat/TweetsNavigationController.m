@@ -40,6 +40,8 @@
             [self promptForSearch];
         }
     }
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (void)didRotate:(NSNotification *)notification {
@@ -98,10 +100,18 @@
     datasource.geocodeSpecifier = [NSString stringWithFormat:@"%f,%f,100mi", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude];
     
     TWTRTimelineViewController *controller = [[TWTRTimelineViewController alloc] initWithDataSource:datasource];
+    controller.tweetViewDelegate = self;
     controller.title = [NSString stringWithFormat:@"Search \"%@\"", text];
     controller.view.backgroundColor = [UIColor whiteColor];
     controller.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(promptForSearch)];
     
     self.viewControllers = @[controller];
+}
+
+// MARK: TWTRTweetViewDelegate
+- (BOOL)tweetView:(TWTRTweetView *)tweetView shouldDisplayDetailViewController:(TWTRTweetDetailViewController *)controller {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
+    return YES;
 }
 @end

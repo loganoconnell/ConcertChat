@@ -14,7 +14,7 @@
 
 @interface ViewController : UIViewController <UITabBarControllerDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MPCManagerDelegate, EAIntroDelegate, CMPopTipViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *peersTableView;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 
 @property (nonatomic, strong) UIView *noDataView;
 @property (nonatomic, strong) UIImageView *noDataImage;
@@ -25,6 +25,8 @@
 @property (nonatomic, strong) NSIndexPath *selectedCellIndex;
 
 @property (nonatomic, strong) NSString *connectedPeerName;
+
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *tableViewTopContraint;
 
 @property (nonatomic) BOOL isAdvertising;
 @property (nonatomic) BOOL isSearching;

@@ -10,7 +10,7 @@
 
 #import "ViewController.h"
 
-@interface TweetsNavigationController : UINavigationController
+@interface TweetsNavigationController : UINavigationController <TWTRTweetViewDelegate>
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
 @property (nonatomic) BOOL hasSearch;

@@ -277,6 +277,8 @@
         }
         
         [self presentViewController:self.pickerController animated:YES completion:nil];
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }];
         
     [alert addButton:@"Take Photo or Video" actionBlock:^{
@@ -407,6 +409,8 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [self dismissViewControllerAnimated:YES completion:nil];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     
     NSDictionary *messageDictionary = @{@"message": @"", @"imageData": UIImagePNGRepresentation(chosenImage)};
@@ -430,6 +434,8 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 // MARK: JSQMessagesComposerTextViewPasteDelegate
